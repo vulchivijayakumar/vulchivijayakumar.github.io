@@ -1,0 +1,12 @@
+/*
+  Vulchi Vijaya Kumar
+*/
+
+header {
+  height: 70px;
+  background-color: #fff;
+  color: #000;
+}
+header .logo {
+  margin: 15px 0;
+}

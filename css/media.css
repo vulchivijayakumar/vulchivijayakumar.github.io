@@ -1,0 +1,54 @@
+/*
+  Vulchi Vijaya Kumar
+*/
+@media (max-width: 767px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+  .content {
+    width: 100%;
+  }
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+  }
+  .mobile-menu::before,
+  .mobile-menu::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 2px;
+    background-color: #000000;
+  }
+  .mobile-menu::before {
+    top: -6px;
+    width: 40px;
+  }
+  .mobile-menu::after {
+    bottom: -6px;
+    width: 20px;
+  }
+  .mobile-menu.active {
+    z-index: 10;
+    height: 0;
+  }
+  .mobile-menu.active::before,
+  .mobile-menu.active::after {
+    width: 40px;
+    background-color: red;
+  }
+  .mobile-menu.active::before {
+    transform: rotate(45deg);
+  }
+  .mobile-menu.active::after {
+    transform: rotate(-45deg);
+  }
+  .main-nav {
+    display: none;
+  }
+}

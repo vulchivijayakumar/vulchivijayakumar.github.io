@@ -1,0 +1,75 @@
+/*
+  Vulchi Vijaya Kumar
+*/
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  position: relative;
+  min-height: 450px;
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+}
+.content {
+  margin: 0 auto;
+  width: calc(100% - 120px);
+  height: calc(100% - 120px);
+  overflow-x: auto;
+}
+.container {
+  margin: 0 auto;
+  width: calc(100% - 120px);
+}
+
+.content::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #fefefe;
+}
+.content::-webkit-scrollbar-thumb {
+    background-color: #673ab7;
+}
+.content::-webkit-scrollbar-track {
+  background-color: #eeeeee;
+}
+
+.page {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.page.home {
+
+}
+.page.about {
+
+}
+
+/*
+
+flatuicolors.com
+
+#1abc9c
+#2ecc71
+#3498db
+#9b59b6
+#34495e
+
+*/
