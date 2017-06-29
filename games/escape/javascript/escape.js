@@ -11,28 +11,32 @@ menu_btn.addEventListener('click', function() {
 	}
 });
 
+function removeMenuToggleClass() {
+	if(menu_btn.matches('.-open')) {
+		menu_btn.classList.remove('-open');
+	}
+}
+
 // initial stuff
 
 var container_width = document.querySelector('.container').clientWidth;
 var container_height = document.querySelector('.container').clientHeight;
 var box_width = (container_width / 10);
 var box_height = (container_height / 10);
-var empty_box = '';
 var set_current_score = document.querySelectorAll('.current-score');
 var end_game = document.querySelector('.end-game');
 end_game.style.display = 'none';
 var app_overlay = document.querySelector('.overlay');
 var start_game = document.querySelector('.start-game');
 var set_best_score = document.querySelector('.best-score');
+var empty_box = '';
 var best_score = [];
 
 // user input takes place here.
 
 function startGame() {
 	userSelectedLevel();
-	if(menu_btn.matches('.-open')) {
-		menu_btn.classList.remove('-open');
-	}
+	removeMenuToggleClass();
 	// generating 100 div elements
 	for (var i=0; i<100; i++) {
 		var box = document.createElement('div');
@@ -40,7 +44,6 @@ function startGame() {
 		box.style.height = box_height + 'px';
 		document.querySelector('.container').appendChild(box);
 	}
-
   // collect boxes and do other stuff
 	if (level === 'easy-level') {
 		var bombs = 6;
@@ -63,7 +66,6 @@ function startGame() {
 }
 
 startGame();
-
 
 function userSelectedLevel() {
 	var selected_level = document.querySelectorAll('.level-set li input');
@@ -150,7 +152,5 @@ game_levels_btn.addEventListener('click', function() {
   end_game.style.display = 'none';
   app_overlay.style.display = 'block';
   start_game.style.display = 'block';
-  if(menu_btn.matches('.-open')) {
-		menu_btn.classList.remove('-open');
-	}
+  removeMenuToggleClass();
 });
