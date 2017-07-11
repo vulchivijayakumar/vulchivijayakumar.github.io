@@ -3,16 +3,16 @@ header {
   text-align: center; }
 
 .logo {
-  font-family: 'roboto-condensed-regular', Helvatica, sans-serif;
+  font-family: 'open-sans-regular', sans-serif;
   font-size: 28px; }
 
-.main-nav {
+.desktop-nav {
   margin: 30px 0 10px; }
-  .main-nav a {
-    margin-right: 5px;
+  .desktop-nav a {
+    margin-right: 6px;
     border-bottom: 1px dashed #f1f1f1; }
-    .main-nav a:last-child {
+    .desktop-nav a:last-child {
       margin-right: 0; }
-    .main-nav a:hover {
+    .desktop-nav a:hover {
       border-color: #000; }
 /*# sourceMappingURL=header.css.map */

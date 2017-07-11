@@ -1,0 +1,15 @@
+.about {
+}
+.profile-pic {
+	margin: 60px auto;
+	width: 120px;
+	height: 120px;
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 2px 0 rgba(0,0,0,0.14), 0 0 4px 0 rgba(0,0,0,0.14), 0 0 6px 0 rgba(0,0,0,0.14);
+	overflow: hidden;
+	img {
+		max-width: 100%;
+		display: block;
+	}
+}
