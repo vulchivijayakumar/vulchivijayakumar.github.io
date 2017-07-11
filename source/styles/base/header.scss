@@ -1,0 +1,21 @@
+header {
+	padding: 30px 0 0;
+	text-align: center;
+}
+.logo {
+	font-family: 'roboto-condensed-regular', Helvatica, sans-serif;
+	font-size: 28px;
+}
+.main-nav {
+	margin: 30px 0 10px;
+	a {
+		margin-right: 5px;
+		border-bottom: 1px dashed #f1f1f1;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			border-color: #000;
+		}
+	}
+}
