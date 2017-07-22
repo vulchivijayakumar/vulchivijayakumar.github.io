@@ -58,30 +58,118 @@ a {
 a:hover {
 	text-shadow: 0 0 0 rgba(0,0,0,.14);
 }
-
+ul {
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+html,
+body {
+	height: 100%;
+}
 body {
 	font-family: 'josefin_sansregular', arial;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 header {
-	text-align: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
 	background-color: #fff;
-	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
+}
+header .container {
+	padding: 15px;
+}
+header.sticky {
+	box-shadow: 0 2px 8px 0 rgba(0,0,0,0.14);
 }
 .logo {
+	display: inline-block;
 	font-family: 'dancing_scriptregular', arial;
 	font-size: 32px;
+	font-weight: bold;
+}
+.menu-burger {
+	display: block;
+	float: right;
+	position: relative;
+	width: 34px;
+	height: 5px;
+	margin-top: 22px;
+	line-height: 1.2;
+	font-size: 0;
+	background-color: #000;
+}
+.menu-burger::after,
+.menu-burger::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	display: block;
+}
+.menu-burger::before {
+	top: -18px;
+	height: 10px;
+	margin-top: 4px;
+	border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+	background-color: #000;
+}
+.menu-burger::after {
+	bottom: -13px;
+	height: 5px;
+	margin-bottom: 4px;
+	border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+	background-color: #000;
+}
+.main-menu li {
+	border-top: 1px solid #eee;
+}
+.main-menu li:last-child {
+	border-bottom: 1px solid #eee;
+}
+.main-menu li a {
+	display: block;
+	padding: 8px;
+	font-weight: bold;
 }
 
 .container {
-	max-width: 1024px;
+	max-width:1024px;
 	margin: 0 auto;
-	padding: 15px;
 }
 
+.content {
+	height: 100%;
+}
+.page {
+	min-height: 100%;
+	padding: 74px 15px 50px;
+}
+.page.home {
+	display: table;
+	width: 100%;
+	padding-top: 0;
+}
+.page.home .container {
+	display: table-cell;
+	vertical-align: middle;
+}
+.home {
+	text-align: center;
+}
 h1 {
+	padding: 50px 0 0;
+	font-size: 26px;
+}
+h2 {
 	font-size: 24px;
+}
+h1 + h3 {
+	padding-bottom: 50px;
 }
 h2 {
 	margin-bottom: 10px;
@@ -93,6 +181,13 @@ p {
 	margin-bottom: 15px;
 }
 
+footer .container {
+	padding: 15px;
+}
+
+footer p {
+	margin-bottom: 0;
+}
 
 
 
