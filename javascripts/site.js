@@ -12,16 +12,22 @@ $(document).ready(function() {
   // menu click function
   $('#menu_burger').on('click', function() {
     if($('#main_menu').hasClass('opened')) {
+      $(this).removeClass('active');
       $('#main_menu').removeClass('opened');
     }
     else {
+      $(this).addClass('active');
       $('#main_menu').addClass('opened');
     }
+  });
+  $('#main_menu a').on('click', function() {
+    $('#menu_burger').removeClass('active');
+    $('#main_menu').removeClass('opened');
   });
 
   setTimeout(function() {
     if(responsiveVoice.voiceSupport()) {
-      responsiveVoice.speak("Hello, Welcome to the Vijay's Profile...");
+      // responsiveVoice.speak("Hello, Welcome to the Vijay's Profile...");
     }
   },1500);
 

@@ -78,6 +78,7 @@ header {
 	top: 0;
 	width: 100%;
 	background-color: #fff;
+	border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 header .container {
 	padding: 15px;
@@ -99,7 +100,7 @@ header.sticky {
 	position: relative;
 	width: 34px;
 	height: 5px;
-	margin-top: 22px;
+	margin-top: 21px;
 	line-height: 1.2;
 	font-size: 0;
 	background-color: #000;
@@ -127,6 +128,11 @@ header.sticky {
   border-bottom-right-radius: 5px;
 	background-color: #000;
 }
+.menu-burger.active,
+.menu-burger.active::before,
+.menu-burger.active::after  {
+	background-color: #ff0000;
+}
 .main-menu {
 	max-height: 0;
 	overflow: hidden;
@@ -145,7 +151,7 @@ header.sticky {
 }
 .main-menu li a {
 	display: block;
-	padding: 8px;
+	padding: 10px 15px;
 	font-weight: bold;
 }
 
@@ -153,18 +159,17 @@ header.sticky {
 	max-width:1024px;
 	margin: 0 auto;
 }
-
 .content {
 	height: 100%;
 }
 .page {
 	min-height: 100%;
-	padding: 74px 15px 50px;
+	padding: 89px 15px 0;
 }
 .page.home {
 	display: table;
 	width: 100%;
-	padding-top: 0;
+	padding: 74px 15px;
 }
 .page.home .container {
 	display: table-cell;
