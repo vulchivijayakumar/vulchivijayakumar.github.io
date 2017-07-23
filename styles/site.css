@@ -78,6 +78,7 @@ body {
 
 header {
 	position: fixed;
+	z-index: 999999;
 	top: 0;
 	width: 100%;
 	background-color: #fff;
@@ -188,47 +189,126 @@ h1 {
 h2 {
 	font-size: 24px;
 }
+h3 {
+	font-size: 22px;
+}
+h4 {
+	font-size: 20px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
 h1 + h3 {
 	padding-bottom: 50px;
 }
 h2 {
 	margin-bottom: 10px;
 }
-h2 + p {
-	text-indent: 60px;
-}
 p {
 	margin-bottom: 15px;
 }
 
-.experience-card {
+.card {
 	margin-top: 20px;
-	padding: 15px;
+	padding: 15px 0;
 	// box-shadow: 0px 2px 10px 0 rgba(0,0,0,0.14);
 	// border-radius: 5px;
 	border-bottom: 1px solid rgba(0,0,0,0.04);
 }
-.experience-card:first-child {
+.card:first-child {
 	margin-top: 10px;
 }
-.experience-card-info {
+.card-info {
 	overflow: hidden;
 }
-.experience-card p {
+.card-details {
+	padding: 15px 0;
+	border-top: 1px solid rgba(0,0,0,0.04);
+}
+.card p {
 	margin-bottom: 0;
 }
-.experience-card .left figure {
+.card .left figure {
 	margin-bottom: 15px;
 }
-.experience-card .left img {
+.card .left img {
 	width: 60px;
 	display: block;
 }
-.experience-card .left img.rectangle {
+.card .left img.rectangle {
 	width: 80px;
 }
-.experience-card .right {
+.card .right {
 	padding-bottom: 15px;
+}
+
+.skills h5 {
+	margin: 20px 0 10px;
+}
+.skills p {
+	position: relative;
+	margin: 0 15px;
+	padding: 5px 0 10px;
+}
+.skills p::before,
+.skills p::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 5px;
+}
+.skills p::before {
+	right: 0;
+	left: 0;
+	background-color: #eee;
+}
+.skills p::after {
+	background-color: #ffff00;
+}
+
+.skills p[data="100"]::after {
+	width: 100%;
+	background-color: #00f000;
+}
+.skills p[data="90"]::after {
+	width: 90%;
+	background-color: #00f000;
+}
+.skills p[data="80"]::after {
+	width: 80%;
+	background-color: #00f000;
+}
+.skills p[data="70"]::after {
+	width: 70%;
+	background-color: #00f000;
+}
+.skills p[data="60"]::after {
+	width: 60%;
+	background-color: #ffa500;
+}
+.skills p[data="50"]::after {
+	width: 50%;
+	background-color: #ffa500;
+}
+.skills p[data="40"]::after {
+	width: 40%;
+	background-color: #ffa500;
+}
+.skills p[data="30"]::after {
+	width: 30%;
+}
+.skills p[data="20"]::after {
+	width: 20%;
+}
+.skills p[data="10"]::after {
+	width: 10%;
+}
+.skills p[data="5"]::after {
+	width: 5%;
 }
 
 footer .container {

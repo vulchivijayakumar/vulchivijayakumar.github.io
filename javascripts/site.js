@@ -44,7 +44,7 @@ $(document).ready(function() {
 
   setTimeout(function() {
     if(responsiveVoice.voiceSupport()) {
-      // responsiveVoice.speak("Hello");
+      responsiveVoice.speak($('#home').text(), "US English Male");
     }
   },1500);
 
