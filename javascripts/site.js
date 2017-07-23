@@ -21,7 +21,7 @@ $(document).ready(function() {
 
   setTimeout(function() {
     if(responsiveVoice.voiceSupport()) {
-      // responsiveVoice.speak("Hello, Welcome to the Vijay's Profile...");
+      responsiveVoice.speak("Hello, Welcome to the Vijay's Profile...");
     }
   },1500);
 
