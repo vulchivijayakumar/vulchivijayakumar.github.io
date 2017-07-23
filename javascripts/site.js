@@ -9,8 +9,21 @@ $(document).ready(function() {
     }
   });
 
+  // menu click function
+  $('#menu_burger').on('click', function() {
+    if($('#main_menu').hasClass('opened')) {
+      $('#main_menu').removeClass('opened');
+    }
+    else {
+      $('#main_menu').addClass('opened');
+    }
+  });
+
   setTimeout(function() {
-  	responsiveVoice.speak($('.logo').text(), "US English Male");
+    if(responsiveVoice.voiceSupport()) {
+      // responsiveVoice.speak("Hello, Welcome to the Vijay's Profile...");
+    }
   },1500);
+
 
 });
