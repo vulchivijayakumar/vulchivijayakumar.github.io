@@ -166,10 +166,10 @@ header.sticky {
 	height: 100%;
 }
 .page {
-	min-height: 100%;
 	padding: 89px 15px 0;
 }
 .page.home {
+	min-height: 100%;
 	display: table;
 	width: 100%;
 	padding: 74px 15px;
@@ -207,31 +207,28 @@ p {
 	box-shadow: 0px 2px 10px 0 rgba(0,0,0,0.14);
 	border-radius: 5px;
 }
+.experience-card:first-child {
+	margin-top: 10px;
+}
 .experience-card-info {
 	overflow: hidden;
 }
 .experience-card p {
 	margin-bottom: 0;
 }
-.experience-card .left,
-.experience-card .right {
-	// float: left;
-}
-.experience-card .left {
-	// width: 25%;
-}
 .experience-card .left figure {
-	width: 100px;
 	margin-bottom: 15px;
 }
 .experience-card .left img {
+	width: 60px;
 	display: block;
 }
+.experience-card .left img.rectangle {
+	width: 80px;
+}
 .experience-card .right {
-	// width: 75%;
 	padding-bottom: 15px;
 }
-
 
 footer .container {
 	padding: 15px;
