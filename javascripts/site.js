@@ -9,25 +9,42 @@ $(document).ready(function() {
     }
   });
 
-  // menu click function
-  $('#menu_burger').on('click', function() {
-    if($('#main_menu').hasClass('opened')) {
-      $(this).removeClass('active');
+
+  // voice code
+
+  if(responsiveVoice.voiceSupport()) {
+    // example
+    // responsiveVoice.speak($('#menu_burger').text());
+    // menu click function
+    $('#menu_burger').on('click', function() {
+      responsiveVoice.speak($(this).text());
+      if($('#main_menu').hasClass('opened')) {
+        $(this).removeClass('active');
+        $('#main_menu').removeClass('opened');
+      }
+      else {
+        $(this).addClass('active');
+        $('#main_menu').addClass('opened');
+      }
+    });
+    $('#main_menu a').on('click', function() {
+      responsiveVoice.speak($(this).text());
+      $('#menu_burger').removeClass('active');
       $('#main_menu').removeClass('opened');
-    }
-    else {
-      $(this).addClass('active');
-      $('#main_menu').addClass('opened');
-    }
-  });
-  $('#main_menu a').on('click', function() {
-    $('#menu_burger').removeClass('active');
-    $('#main_menu').removeClass('opened');
-  });
+    });
+
+    //
+    // $('#main_menu a').on('mouseenter', function() {
+    //   responsiveVoice.speak($(this).text());
+    // });
+
+    
+
+  }
 
   setTimeout(function() {
     if(responsiveVoice.voiceSupport()) {
-      // responsiveVoice.speak("Hello, Welcome to the Vijay's Profile...");
+      // responsiveVoice.speak("Hello");
     }
   },1500);
 
