@@ -146,12 +146,18 @@ header.sticky {
 }
 .main-menu.opened {
 	max-height: 400px;
-}
-.main-menu li {
 	border-top: 1px solid #eee;
 }
-.main-menu li:last-child {
+.main-menu li {
+	width: 50%;
+	float: left;
 	border-bottom: 1px solid #eee;
+}
+.main-menu li:nth-child(2n) {
+	border-left: 1px solid #eee;
+}
+.main-menu li:last-child {
+	border-bottom: 0;
 }
 .main-menu li a {
 	display: block;
