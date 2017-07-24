@@ -56,9 +56,9 @@
 
 .daytripper {
 	background: #f857a6;
-		background: -webkit-linear-gradient(left, #ff5858, #f857a6);
-		background: -o-linear-gradient(left, #ff5858, #f857a6);
-		background: linear-gradient(to right, #ff5858, #f857a6);
+	background: -webkit-linear-gradient(left, #ff5858, #f857a6);
+	background: -o-linear-gradient(left, #ff5858, #f857a6);
+	background: linear-gradient(to right, #ff5858, #f857a6);
 }
 
 .aqualicious {
