@@ -7,6 +7,7 @@ $(document).ready(function() {
     } else {
         $("header").removeClass("sticky");
     }
+
   });
 
 
@@ -17,7 +18,7 @@ $(document).ready(function() {
     // responsiveVoice.speak($('#menu_burger').text());
     // menu click function
     $('#menu_burger').on('click', function() {
-      responsiveVoice.speak($(this).text());
+      responsiveVoice.speak($(this).text(), "US English Male");
       if($('#main_menu').hasClass('opened')) {
         $(this).removeClass('active');
         $('#main_menu').removeClass('opened');
@@ -28,9 +29,14 @@ $(document).ready(function() {
       }
     });
     $('#main_menu a').on('click', function() {
-      responsiveVoice.speak($(this).text());
       $('#menu_burger').removeClass('active');
       $('#main_menu').removeClass('opened');
+      if ($(this).attr('href') == '#about') {
+        responsiveVoice.speak($('#about').text(), "US English Male");
+      }
+      else {
+        responsiveVoice.speak($(this).text(), "US English Male");
+      }
     });
 
     //
