@@ -177,13 +177,13 @@ header.sticky {
 	height: 100%;
 }
 .page {
-	padding: 89px 0 0;
+	padding-top: 89px;
 }
 .page.home {
 	min-height: 100%;
 	display: table;
 	width: 100%;
-	padding: 74px;
+	padding-top: 74px;
 	animation: cssslider 30s linear infinite;
 }
 .page.home .container {
@@ -194,7 +194,7 @@ header.sticky {
 	text-align: center;
 }
 h1 {
-	padding: 50px 0 0;
+	padding-top: 50px;
 	font-size: 26px;
 }
 h2 {
@@ -366,7 +366,7 @@ footer p {
   	border: 0;
   }
   .page {
-		padding: 129px 0 0;
+		padding-top: 129px;
 	}
 	.page .container {
 		overflow: hidden;
