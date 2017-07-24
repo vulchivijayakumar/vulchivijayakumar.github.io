@@ -250,7 +250,7 @@ p {
 }
 
 .skills h5 {
-	margin: 20px 0 10px;
+	margin: 10px 0;
 }
 .skills p {
 	position: relative;
@@ -342,6 +342,41 @@ footer p {
 		background: #00BCD4;
 		color: #fff;
 	}
+}
+
+@media only screen and (min-width: 500px) {
+
+  .menu-burger {
+  	display: none;
+  }
+  .main-menu {
+  	float: right;
+  	max-height: 100px;
+  	border: 0;
+  }
+  .main-menu li,
+  .main-menu li:last-child {
+  	width: auto;
+  	border: 0;
+  }
+  .main-menu li:nth-child(2n) {
+  	border: 0;
+  }
+  .page {
+		padding: 129px 15px 0;
+		overflow: hidden;
+	}
+	.page.home {
+		padding: 104px 15px;
+	}
+	.card {
+		float: left;
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 980px) {
+  
 }
 
 
