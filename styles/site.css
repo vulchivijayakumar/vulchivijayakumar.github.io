@@ -295,6 +295,9 @@ p {
 	padding-bottom: 15px;
 }
 
+.skills .card {
+	padding-bottom: 25px;
+}
 .skills h5 {
 	margin: 10px 0;
 }
@@ -344,7 +347,7 @@ p {
 }
 .skills p[data="60"]::after {
 	width: 60%;
-	background-color: #FFC107;
+	background-color: #4CAF50;
 }
 .skills p[data="50"]::after {
 	width: 50%;
