@@ -1,13 +1,12 @@
 $(document).ready(function() {
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
   	var scroll = $(window).scrollTop();
     if (scroll >= 50) {
-        $("header").addClass("sticky");
+      $("header").addClass("sticky");
     } else {
-        $("header").removeClass("sticky");
+      $("header").removeClass("sticky");
     }
-
   });
 
 
@@ -22,8 +21,7 @@ $(document).ready(function() {
       if($('#main_menu').hasClass('opened')) {
         $(this).removeClass('active');
         $('#main_menu').removeClass('opened');
-      }
-      else {
+      } else {
         $(this).addClass('active');
         $('#main_menu').addClass('opened');
       }
@@ -43,16 +41,11 @@ $(document).ready(function() {
     // $('#main_menu a').on('mouseenter', function() {
     //   responsiveVoice.speak($(this).text());
     // });
-
-    
-
   }
 
-  setTimeout(function() {
+  setTimeout(function () {
     if(responsiveVoice.voiceSupport()) {
-      responsiveVoice.speak($('#home').text(), "US English Male");
+      // responsiveVoice.speak($('#home').text(), "US English Male");
     }
-  },1500);
-
-
+  }, 1500);
 });
