@@ -417,7 +417,12 @@ p {
 .skills .card {
 	padding-bottom: 25px;
 }
+
 .skills h5 {
+	margin: 25px 0 10px;
+}
+
+.skills h5:first-child {
 	margin: 10px 0;
 }
 .skills p {
