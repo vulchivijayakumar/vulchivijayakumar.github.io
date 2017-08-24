@@ -1,0 +1,14 @@
+.page {
+  padding-top: 89px;
+}
+.page.home {
+  padding: 74px 15px;
+  background: linear-gradient(45deg, #131D53 0%, #212A51 40%, #2E4B75);
+}
+.page.home .container {
+  padding: 0 100px;
+}
+.cube {
+  top: 48%;
+  left: 60%;
+}

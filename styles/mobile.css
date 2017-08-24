@@ -393,7 +393,7 @@ p {
 	overflow: hidden;
 }
 .card-details {
-	display: none;
+	// display: none;
 	padding: 15px 0;
 }
 .card p {
@@ -530,75 +530,4 @@ footer p {
   100% {
     transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
   }
-}
-
-@media only screen and (min-width: 600px) {
-  .menu-burger {
-  	display: none;
-  }
-  .main-menu {
-  	float: right;
-  	max-height: 100px;
-  	border: 0;
-  }
-  .main-menu li,
-  .main-menu li:last-child {
-  	width: auto;
-  	border: 0;
-  }
-	.main-menu li a {
-		color: #fff;
-	}
-	header.sticky .main-menu a {
-		color: #000;
-	}
-  .main-menu li:nth-child(2n) {
-  	border: 0;
-  }
-  .page {
-		padding-top: 129px;
-	}
-	.page .container {
-		overflow: hidden;
-	}
-	.page.home {
-		padding: 104px 15px;
-	}
-	.page.home .container {
-		padding: 0 50px;
-	}
-	.card {
-		float: left;
-		width: 50%;
-	}
-	.home {
-		text-align: left;
-	}
-	h1 {
-		font-size: 40px;
-	}
-	h3 {
-		font-size: 30px;
-	}
-	.cube {
-		top: 40%;
-		left: 70%;
-	}
-}
-
-@media only screen and (min-width: 980px) {
-	.page {
-		padding-top: 89px;
-	}
-	.page.home {
-		padding: 74px 15px;
-		background: linear-gradient(45deg, #131D53 0%, #212A51 40%, #2E4B75);
-	}
-	.page.home .container {
-		padding: 0 100px;
-	}
-	.cube {
-		top: 48%;
-		left: 60%;
-	}
 }
