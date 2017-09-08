@@ -12,10 +12,11 @@ Header set Connection keep-alive
         Header set Cache-Control "max-age=172800, public, must-revalidate"
     </filesMatch>
 
-    # 2 HOURS
-    <filesMatch "\.(html|htm)$">
-        Header set Cache-Control "max-age=7200, must-revalidate"
-    </filesMatch>
+    # 2
+    # Do not cache html/htm/php/asp etc pages
+    # <filesMatch "\.(html|htm)$">
+    #    Header set Cache-Control "max-age=7200, must-revalidate"
+    # </filesMatch>
 
     # 1 Week
     <filesMatch "\.(js|css|swf)$">
