@@ -210,6 +210,29 @@ footer p {
   font-size: 20px;
 }
 
+form {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 18px;
+  background-color: #eee;
+  color: #4d4d4d;
+}
+
+form input {
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+form input[type="submit"] {
+  margin-top: 5px;
+  border: 0;
+  background-color: #999;
+  color: #fff;
+  cursor: pointer;
+}
+
 @media (min-width: 1280px) {
   .col-3,
   .col-4,
