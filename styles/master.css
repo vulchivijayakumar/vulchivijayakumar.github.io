@@ -1,0 +1,172 @@
+/* Vulchi Vijaya Kumar */
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* font-face */
+@font-face {
+  font-family: 'josefin-sans-regular';
+  src: url('../fonts/josefin-sans-regular.woff2') format('woff2'),
+       url('../fonts/josefin-sans-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'josefin-sans-regular', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #fff;
+  color: #000;
+}
+
+/* layout */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px
+}
+
+.row {
+  overflow: hidden;
+}
+
+[class^='col-'] {
+  float: left;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+/* logo */
+.logo {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.logo::after {
+  content: 'Front end developer.';
+  position: absolute;
+  right: -130px;
+  bottom: 0;
+  font-size: 16px;
+  line-height: 1;
+  color: #000;
+}
+
+/* typo */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 17px;
+  margin: 5px 0;
+}
+
+.para {
+  text-indent: 40px;
+  margin: 0 0 15px;
+}
+
+/* Skills */
+.skills p span {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+  text-indent: 0;
+}
+
+.skills p span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: #999;
+}
+
+.skills [data-per='10']::after {
+  width: 10%;
+}
+
+.skills [data-per='20']::after {
+  width: 20%;
+}
+
+.skills [data-per='30']::after {
+  width: 30%;
+}
+
+.skills [data-per='40']::after {
+  width: 40%;
+}
+
+.skills [data-per='50']::after {
+  width: 50%;
+}
+
+.skills [data-per='60']::after {
+  width: 60%;
+}
+
+.skills [data-per='70']::after {
+  width: 70%;
+}
+
+.skills [data-per='80']::after {
+  width: 80%;
+}
+
+.skills [data-per='90']::after {
+  width: 90%;
+}
+
+.skills [data-per='100']::after {
+  width: 100%;
+}
+
+/* footer */
+footer {
+  font-size: 16px;
+  color: #eee;
+  text-align: right;
+}
