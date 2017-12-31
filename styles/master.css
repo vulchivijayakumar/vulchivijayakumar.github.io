@@ -20,6 +20,11 @@ html {
 
 a {
   text-decoration: none;
+  color: #3498db;
+}
+
+a:hover {
+  color: #000000;
 }
 
 /* font-face */
@@ -73,14 +78,20 @@ body {
 }
 
 .more {
-  color: #34495e;
+  color: #3498db;
   text-transform: lowercase;
   text-decoration: underline;
   cursor: pointer;
 }
 
 .more:hover {
-  color: #2c3e50;
+  color: #000000;
+}
+
+.highlight-text {
+  padding: 0 5px;
+  background-color: #3498db;
+  color: #ffffff;
 }
 
 /* logo */
