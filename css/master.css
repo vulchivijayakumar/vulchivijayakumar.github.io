@@ -101,7 +101,11 @@ body {
 }
 
 .hide {
-  display: none;
+  display: none !important;
+}
+
+.show {
+  display: block !important;
 }
 
 /* logo */
@@ -256,6 +260,10 @@ h5::after {
 
 .skills [data-per='100']::after {
   width: 100%;
+}
+
+.education p.para span {
+  display: block;
 }
 
 /* contact */
