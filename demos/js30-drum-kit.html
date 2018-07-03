@@ -37,7 +37,7 @@
       <audio data-key="76" src="./resources/sounds/tom.wav"></audio>
     </div>
     <script>
-      window.addEventListener('touchstart', function (e) {
+      window.addEventListener('click', function (e) {
         let target = e.target.parentNode.getAttribute('data-key');
         let audio = document.querySelector(`audio[data-key="${target}"]`);
         let key = document.querySelector(`.key[data-key="${target}"]`);
