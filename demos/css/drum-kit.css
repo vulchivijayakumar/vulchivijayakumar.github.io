@@ -1,0 +1,28 @@
+/* Drum kit styles */
+
+.keys {
+  text-align: center;
+}
+
+.keys li {
+  width: 75px;
+  margin: 0 6px 0 10px;
+  padding: 10px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.24);
+  display: inline-block;
+  border: 1px solid #999;
+  transition: box-shadow 150ms ease-in;
+  cursor: pointer;
+}
+
+.keys li.playing,
+.keys li:hover {
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.14);
+}
+
+.keys li span {
+  display: block;
+  font-size: 13px;
+}

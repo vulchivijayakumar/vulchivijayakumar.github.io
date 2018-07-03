@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript 30 - Drum kit</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/drum-kit.css">
+  </head>
+  <body>
+    <div class="container fixed fixed-bottom">
+      <ul class="keys">
+        <li data-key="65" class="key">A <span>Boom</span></li>
+        <li data-key="83" class="key">S <span>Clap</span></li>
+        <li data-key="68" class="key">D <span>Hihat</span></li>
+        <li data-key="70" class="key">F <span>Kick</span></li>
+        <li data-key="71" class="key">G <span>Openhat</span></li>
+        <li data-key="72" class="key">H <span>Ride</span></li>
+        <li data-key="74" class="key">J <span>Snare</span></li>
+        <li data-key="75" class="key">K <span>Tink</span></li>
+        <li data-key="76" class="key">L <span>Tom</span></li>
+      </ul>
+      <audio data-key="65" src="./resources/sounds/boom.wav"></audio>
+      <audio data-key="83" src="./resources/sounds/clap.wav"></audio>
+      <audio data-key="68" src="./resources/sounds/hihat.wav"></audio>
+      <audio data-key="70" src="./resources/sounds/kick.wav"></audio>
+      <audio data-key="71" src="./resources/sounds/openhat.wav"></audio>
+      <audio data-key="72" src="./resources/sounds/ride.wav"></audio>
+      <audio data-key="74" src="./resources/sounds/snare.wav"></audio>
+      <audio data-key="75" src="./resources/sounds/tink.wav"></audio>
+      <audio data-key="76" src="./resources/sounds/tom.wav"></audio>
+    </div>
+    <script>
+      window.addEventListener('keydown', function (e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        if (!audio) return;
+        audio.currentTime = 0; // play over and over gain.
+        audio.play();
+        key.classList.add('playing');
+        setTimeout(function () {
+          key.classList.remove('playing');
+        }, 150);
+      });
+    </script>
+  </body>
+</html>

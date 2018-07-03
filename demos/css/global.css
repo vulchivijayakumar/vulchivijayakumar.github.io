@@ -1,0 +1,50 @@
+/* global styles */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: cursive;
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 99999;
+}
+
+.fixed-bottom {
+  right: 0;
+  bottom: 50px;
+  left: 0;
+}
