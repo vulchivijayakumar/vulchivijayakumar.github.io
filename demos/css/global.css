@@ -32,6 +32,9 @@ body {
   color: #666;
 }
 
+header {
+  padding: 15px 0;
+}
 .container {
   max-width: 1024px;
   margin: 0 auto;
@@ -45,6 +48,16 @@ body {
 
 .fixed-bottom {
   right: 0;
-  bottom: 50px;
+  bottom: 30px;
   left: 0;
+}
+
+.align-center {
+  text-align: center;
+}
+
+@media screen and (min-width: 980px) {
+  .fixed-bottom {
+    bottom: 50px;
+  }
 }

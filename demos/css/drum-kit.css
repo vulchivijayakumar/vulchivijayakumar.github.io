@@ -6,7 +6,7 @@
 
 .keys li {
   width: 75px;
-  margin: 0 6px 0 10px;
+  margin: 0 6px 20px 10px;
   padding: 10px 0;
   background-color: #fff;
   border-radius: 10px;
@@ -17,6 +17,10 @@
   cursor: pointer;
 }
 
+.keys li > span:nth-child(1) {
+  display: none;
+}
+
 .keys li.playing,
 .keys li:hover {
   box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.14);
@@ -25,4 +29,13 @@
 .keys li span {
   display: block;
   font-size: 13px;
+}
+
+@media screen and (min-width: 980px) {
+  .keys li {
+    margin: 0 6px 0 10px;
+  }
+  .keys li > span:nth-child(1) {
+    display: block;
+  }
 }
