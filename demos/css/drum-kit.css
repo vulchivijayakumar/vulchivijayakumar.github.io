@@ -7,7 +7,6 @@
 .keys li {
   width: 75px;
   margin: 0 6px 20px 10px;
-  padding: 10px 0;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -28,14 +27,19 @@
 
 .keys li span {
   display: block;
+  padding: 10px 0;
   font-size: 13px;
 }
 
 @media screen and (min-width: 980px) {
   .keys li {
     margin: 0 6px 0 10px;
+    padding: 10px 0;
   }
   .keys li > span:nth-child(1) {
     display: block;
+  }
+  .keys li span {
+    padding: 0;
   }
 }
