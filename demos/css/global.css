@@ -56,7 +56,19 @@ header {
   text-align: center;
 }
 
+.hide-mobile {
+  display: none;
+}
+
 @media screen and (min-width: 980px) {
+  .only-mobile {
+    display: none;
+  }
+
+  .hide-mobile {
+    display: block;
+  }
+
   .fixed-bottom {
     bottom: 50px;
   }
