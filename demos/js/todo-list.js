@@ -80,8 +80,8 @@ $(function () {
   };
 
   let deleteTask = function () {
-    var listItem = $(this).parent();
-    listItem.parent().remove(listItem);
+    var listItem = $(this).parent().parent();
+    listItem.remove();
   };
 
   let currentTask = function () {
