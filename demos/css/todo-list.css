@@ -1,0 +1,98 @@
+/* todo list */
+.bb-line {
+  border-bottom: 1px solid #999;
+}
+
+.bt-line {
+  border-top: 1px solid #999;
+}
+
+.add-task {
+  overflow: hidden;
+  position: relative;
+}
+
+.add-task input {
+  height: 40px;
+  padding-right: 50px;
+  border-radius: 5px 20px 20px 5px;
+  border: 1px solid #999;
+  /*transition: border 300ms;*/
+}
+
+.add-task input:focus {
+  border-color: #0088fc;
+}
+
+.add-task .button-field {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.add-task button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1;
+  border-radius: 50%;
+}
+
+.card {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,64,67,.16);
+}
+
+.card-task {
+  overflow: hidden;
+}
+
+.card-task .inputs-group,
+.card-task .btns-group {
+  float: left;
+}
+
+.card-task .inputs-group {
+  width: 80%;
+}
+
+.inputs-group {
+
+}
+
+.card-task .btns-group {
+  width: 20%;
+  text-align: right;
+}
+
+.btns-group button {
+  margin-left: 5px;
+}
+
+.card-task label {
+  display: block;
+}
+
+.card-task input[type='text'] {
+  display: none;
+}
+
+.card-task.editMode label {
+  display: none;
+}
+
+.card-task.editMode input[type='text'] {
+  display: block;
+}
+
+.tasks-block {
+  padding: 15px 0;
+}
+
+.pos-right {
+
+}

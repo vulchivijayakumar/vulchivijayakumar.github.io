@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pure JavaScript todo list</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/todo-list.css">
+  </head>
+  <body>
+    <header>
+      <div class="container default-container align-center">
+        <h1>Todo's</h1>
+      </div>
+    </header>
+    <div class="container small-container">
+      <form action="" class="card add-task">
+        <div class="input-field">
+          <input id="input_task" type="text" value="" placeholder="Enter your task here.">
+        </div>
+        <div class="button-field">
+          <button id="addTaskBtn" type="submit" class="">+</button>
+        </div>
+      </form>
+      <div id="current_task_block" class="tasks-block current-tasks bt-line bb-line mt-sm">
+        <p class="note-msg align-center">- You do not have any tasks! -</p>
+      </div>
+      <div id="completed_task_block" class="tasks-block completed-tasks bb-line">
+        <p class="note-msg align-center">- You do not have completed tasks! -</p>
+      </div>
+    </div>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/todo-list.js"></script>
+  </body>
+</html>

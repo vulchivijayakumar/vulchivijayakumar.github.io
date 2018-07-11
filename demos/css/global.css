@@ -35,10 +35,18 @@ body {
 header {
   padding: 15px 0;
 }
+
 .container {
-  max-width: 1024px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.default-container {
+  max-width: 1024px;
+}
+
+.small-container {
+  max-width: 800px;
 }
 
 .fixed {
@@ -52,12 +60,61 @@ header {
   left: 0;
 }
 
+.mt-sm {
+  margin-top: 15px;
+}
+
+.mb-sm {
+  margin-bottom: 15px;
+}
+
+.pb-sm {
+  padding-bottom: 15px;
+}
+
+.note-msg {
+  font-size: 14px;
+  color: #666;
+}
+
 .align-center {
   text-align: center;
 }
 
+.align-right {
+  text-align: right;
+}
+
 .hide-mobile {
   display: none;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+input,
+button {
+  font-size: 14px;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #0088fc;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 300ms;
+}
+
+button:hover {
+  background-color: #1f6aaa;
 }
 
 @media screen and (min-width: 980px) {
