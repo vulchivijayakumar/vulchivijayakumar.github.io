@@ -1,92 +1,219 @@
-/* todo list */
-.bb-line {
-  border-bottom: 1px solid #999;
+/* global styles */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html {
+  box-sizing: border-box;
 }
 
-.bt-line {
-  border-top: 1px solid #999;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
-.add-task {
-  overflow: hidden;
-  position: relative;
-}
-
-.add-task input {
-  height: 40px;
-  padding-right: 50px;
-  border-radius: 5px;
-  border: 1px solid #999;
-  /*transition: border 300ms;*/
-}
-
-.add-task input:focus {
-  border-color: #0088fc;
-}
-
-.add-task .button-field {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-.add-task button {
-  width: 40px;
-  height: 40px;
+* {
+  margin: 0;
   padding: 0;
-  border-radius: 0 5px 5px 0;
+  outline: 0;
 }
 
-.card {
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #2f3542;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', arial;
+  background-color: #f9f9f9;
+  color: #2f3542;
+}
+
+header,
+footer {
+  padding: 15px 0;
+}
+
+footer {
+  font-size: 12px;
+  color: #999999;
+}
+/* component Aka reusable styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.mb-sm {
+  margin-bottom: 20px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.heading-title {
+  margin: 10px 0 20px;
+}
+
+/* card box design */
+.card-box {
+  position: relative;
+  overflow: hidden;
   padding: 15px;
-  background-color: #fff;
-  border-radius: 5px;
+  background-color: #ffffff;
+  border-radius: 3px;
   box-shadow: 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,64,67,.16);
 }
 
-.card-task {
-  overflow: hidden;
+.add-task {
+  margin-bottom: 20px;
 }
 
-.card-task .inputs-group,
-.card-task .btns-group {
+/* form styles */
+.input-field {
+  position: relative;
+}
+
+input[type='text'] {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 14px;
+  color: #2f3542;
+  border: 1px solid #7d5fff;
+  border-radius: 5px 0 0 5px;
+}
+
+button {
+  transition: background-color 300ms;
+  text-align: center;
+  padding: 10px 15px;
+  background-color: #7d5fff;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: #7158e2;
+}
+
+button img {
+  width: 15px;
+  height: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+.input_error {
+  position: absolute;
+  top: -11px;
+  left: 5px;
+  padding: 2px 5px;
+  font-size: 13px;
+  background-color: #fff;
+  color: #ff3838;
+}
+
+.form-task {
+  margin-bottom: 20px;
+}
+
+.form-task .input-field {
   float: left;
 }
 
-.card-task .inputs-group {
-  width: 80%;
+.form-task .button-field {
+  float: right
 }
 
-.inputs-group {
-
+.form-task .input-field {
+  width: calc(100% - 45px);
 }
 
-.card-task .btns-group {
-  width: 20%;
-  text-align: right;
+.form-task .button-field button {
+  height: 40px;
+  border-radius: 0 5px 5px 0;
 }
 
-.btns-group button {
-  padding: 8px;
-  margin-left: 5px;
+/* todo list */
+.tasks-block .card-box {
+  margin-bottom: 5px;
 }
 
-.card-task label {
-  display: block;
+.tasks-block .card-box:last-child {
+  margin-bottom: 20px;
 }
 
-.card-task input[type='text'] {
+.tasks-block .card-box input[type='text'] {
   display: none;
 }
 
-.card-task.editMode label {
+.card-box.editMode label {
   display: none;
 }
 
-.card-task.editMode input[type='text'] {
-  display: block;
+.card-box.editMode input[type='text'] {
+  width: calc(100% - 32px);
+  margin-left: 22px;
+  display: inline-block;
+  border-radius: 3px;
 }
 
-.tasks-block {
-  padding: 15px 0;
+.tasks-block .card-box {
+  min-height: 65px;
+}
+
+.tasks-block .card-box .inputs-group,
+.tasks-block .card-box .buttons-group {
+  float: left;
+}
+
+.tasks-block .card-box .inputs-group {
+  width: calc(100% - 100px);
+}
+
+.tasks-block .card-box .buttons-group {
+  width: 100px;
+}
+
+.inputs-group input[type='checkbox'] {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+
+.inputs-group label {
+  display: block;
+  padding: 0 15px 0 21px;
+}
+
+.buttons-group button {
+  margin-right: 10px;
+}
+
+.buttons-group button:last-child {
+  margin-right: 0;
+}
+
+.tasks-block--current {
+  border-top: 1px solid #999;
+}
+
+.tasks-block--completed {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+}
+
+.tasks-block--completed label {
+  text-decoration: line-through;
 }

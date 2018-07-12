@@ -90,43 +90,6 @@ header {
   display: none;
 }
 
-.form-field {
-  margin-bottom: 15px;
-}
-
-input,
-button {
-  font-size: 14px;
-  color: #000;
-}
-
-input[type='text'] {
-  width: 100%;
-  padding: 10px;
-}
-
-button {
-  text-align: center;
-  transition: background-color 300ms;
-  padding: 10px 15px;
-  background-color: #0088fc;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-}
-
-button img {
-  width: 15px;
-  height: 15px;
-  display: block;
-  margin: 0 auto;
-}
-
-button:hover {
-  background-color: #1f6aaa;
-}
-
 @media screen and (min-width: 980px) {
   .only-mobile {
     display: none;

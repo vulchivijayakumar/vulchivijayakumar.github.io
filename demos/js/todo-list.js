@@ -6,14 +6,24 @@ $(function () {
   let addTaskBtn = $('#addTaskBtn');
   let currentTaskBlock = $('#current_task_block');
   let completedTaskBlock = $('#completed_task_block');
+  let inputTaskError = $('#input_task_error');
 
   const editSVG = '<img src="./img/edit.svg" alt="edit" title="edit"/>';
   const deleteSVG = '<img src="./img/delete.svg" alt="delete" title="delete"/>';
   const editSVGIcon = './img/edit.svg';
   const updatedSVGIcon = './img/update.svg';
 
+  taskInputEle.on('focus', function () {
+    inputTaskError.text('');
+  });
+
   addTaskBtn.on('click', function (e) {
-    addTask();
+    // validation input field
+    if (taskInputEle.val() !== '') {
+      addTask();
+    } else {
+      inputTaskError.text('This field can not be empty');
+    }
     e.preventDefault();
   });
 
@@ -21,16 +31,16 @@ $(function () {
     var listItem = createTask(taskInputEle.val());
     currentTaskBlock.append(listItem);
     bindTaskEvents(listItem, taskCompleted);
-    taskInputEle.value = '';
+    taskInputEle.val('');
   };
 
   let createTask = function (inputValue) {
-    let taskCard = $('<div class="card card-task mb-sm"></div>');
+    let taskCard = $('<div class="card-box"></div>');
     let inputsGroups = $('<div class="inputs-group"></div>');
     let checkBox = document.createElement('input');
     let label = document.createElement('label');
     let editInput = document.createElement('input');
-    let buttonGroups = $('<div class="btns-group"></div>');
+    let buttonGroups = $('<div class="buttons-group"></div>');
     var editButton = document.createElement('button');
     var deleteButton = document.createElement('button');
     label.innerText = inputValue;
