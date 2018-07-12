@@ -15,7 +15,7 @@
 .add-task input {
   height: 40px;
   padding-right: 50px;
-  border-radius: 5px 20px 20px 5px;
+  border-radius: 5px;
   border: 1px solid #999;
   /*transition: border 300ms;*/
 }
@@ -34,10 +34,7 @@
   width: 40px;
   height: 40px;
   padding: 0;
-  text-align: center;
-  font-size: 22px;
-  line-height: 1;
-  border-radius: 50%;
+  border-radius: 0 5px 5px 0;
 }
 
 .card {
@@ -70,6 +67,7 @@
 }
 
 .btns-group button {
+  padding: 8px;
   margin-left: 5px;
 }
 
@@ -91,8 +89,4 @@
 
 .tasks-block {
   padding: 15px 0;
-}
-
-.pos-right {
-
 }

@@ -1,4 +1,4 @@
-let $ = jQuery;
+let $ = jQuery; // $ defined to avoid jslinters error.
 $(function () {
   console.log('I am ready');
   // variables
@@ -7,8 +7,10 @@ $(function () {
   let currentTaskBlock = $('#current_task_block');
   let completedTaskBlock = $('#completed_task_block');
 
-  const editSVG = 'Edit';
-  const removeSVG = 'Delete';
+  const editSVG = '<img src="./img/edit.svg" alt="edit" title="edit"/>';
+  const deleteSVG = '<img src="./img/delete.svg" alt="delete" title="delete"/>';
+  const editSVGIcon = './img/edit.svg';
+  const updatedSVGIcon = './img/update.svg';
 
   addTaskBtn.on('click', function (e) {
     addTask();
@@ -37,7 +39,7 @@ $(function () {
     editInput.type = 'text';
     editButton.innerHTML = editSVG;
     editButton.className = 'edit';
-    deleteButton.innerHTML = removeSVG;
+    deleteButton.innerHTML = deleteSVG;
     deleteButton.className = 'delete';
     // and appending.
     inputsGroups.append(checkBox);
@@ -54,9 +56,9 @@ $(function () {
     var checkBox = taskListItem.find('input[type=checkbox]');
     var editButton = taskListItem.find('button.edit');
     var deleteButton = taskListItem.find('button.delete');
-    editButton.on('click', editTask);
-    deleteButton.on('click', deleteTask);
-    checkBox.on('click', taskCompletedItem);
+    editButton.unbind('click').click(editTask);
+    deleteButton.unbind('click').click(deleteTask);
+    checkBox.unbind('click').click(taskCompletedItem);
   };
 
   let editTask = function () {
@@ -64,10 +66,11 @@ $(function () {
     var editInput = listItem.find('input[type=text]');
     var label = listItem.find('label');
     var containsClass = listItem.hasClass('editMode');
-    // If class of the parent is .editmode
     if (containsClass) {
+      listItem.find('button.edit img').attr('src', editSVGIcon);
       label.text(editInput.val());
     } else {
+      listItem.find('button.edit img').attr('src', updatedSVGIcon);
       editInput.val(label.text());
     }
     listItem.toggleClass('editMode');
