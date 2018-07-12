@@ -1,55 +1,62 @@
+/*
+  Title: A simple GoodReads javascript client web app
+  1. Should be able to search the books with name
+  2. Interface to list the books with pagination
+*/
 const $ = jQuery;
-goodRead('9382749004'); // not found
-goodRead('0441172717'); // single author
-goodRead('0552137030'); // multiple author
-
-function goodRead (isbn) {
-  var key = '9ZVefZRKvvSiLfY7f3pQ'; // replace with your key
-  var url = 'https://www.goodreads.com/search/index.xml';
-  $.get(url,
+$(document).ready(function () {
+  let searchInput = 'titan'; // $('#search_input'); // book names i.e anna
+  let apiKey = '9ZVefZRKvvSiLfY7f3pQ'; // goodreads api key
+  let searchType = 'all';
+  var url = `https://www.goodreads.com/search/index.xml?q=${searchInput}&key=${apiKey}&search=${searchType}`;
+  $.get('http://query.yahooapis.com/v1/public/yql',
     {
-      q: `select * from xml where url="{url}"`,
-      format: 'json'
+      // "select * from xml where url=\""+url+"\"",
+      q: `select * from xml where url="${url}"`,
+      format: 'xml'
     },
-    function (json) {
-      if (json.query.results.error === 'Page not found') {
-        console.log('no book found');
-      } else {
-        var book = json.query.results.GoodreadsResponse.book;
-        var title = book.title;
-        var isbn10 = book.isbn;
-        var isbn13 = book.isbn13;
-        var countryCode = book.country_code;
-        var imageUrl = book.image_url;
-        var smallImageUrl = book.small_image_url;
-        var publisher = book.publisher;
-        var description = book.description;
-        var allAuthors = book.authors.author;
-        var authors;
-        if (book.authors.author.length === undefined) {
-          // single author
-          authors = [allAuthors.name];
-        } else {
-          // multiple authors
-          var authorCount = allAuthors.length;
-          authors = [];
-          for (var i = 0; i < authorCount; i++) {
-            authors.push(allAuthors[i].name);
-          }
-        }
-        var bookObject = {
-          'title': title,
-          'isbn10': isbn10,
-          'isbn13': isbn13,
-          'country_code': countryCode,
-          'image_url': imageUrl,
-          'small_image_url': smallImageUrl,
-          'publisher': publisher,
-          'description': description,
-          'authors': authors
-        };
-        console.log(bookObject);
-      }
+    function (xml) {
+      // console.log(xml);
+      let data = xmlToJson(xml);
+      let books = data['query']['results']['GoodreadsResponse']['search']['results']['work'];
+      books.forEach(function (book, index) {
+        // [0]['best_book']['title']['#text']
+        console.log(book['best_book']['title']['#text']);
+        console.log(book['best_book']['image_url']['#text']);
+      });
     }
   );
-}
+
+  // Changes XML to JSON
+  function xmlToJson (xml) {
+    var obj = {};
+    if (xml.nodeType === 1) {
+      if (xml.attributes.length > 0) {
+        obj['@attributes'] = {};
+        for (var j = 0; j < xml.attributes.length; j++) {
+          var attribute = xml.attributes.item(j);
+          obj['@attributes'][attribute.nodeName] = attribute.nodeValue;
+        }
+      }
+    } else if (xml.nodeType === 3) { // text
+      obj = xml.nodeValue;
+    }
+    if (xml.hasChildNodes()) {
+      for (var i = 0; i < xml.childNodes.length; i++) {
+        var item = xml.childNodes.item(i);
+        var nodeName = item.nodeName;
+        if (typeof (obj[nodeName]) === 'undefined') {
+          obj[nodeName] = xmlToJson(item);
+        } else {
+          if (typeof (obj[nodeName].push) === 'undefined') {
+            var old = obj[nodeName];
+            obj[nodeName] = [];
+            obj[nodeName].push(old);
+          }
+          obj[nodeName].push(xmlToJson(item));
+        }
+      }
+    }
+    return obj;
+  }
+});
