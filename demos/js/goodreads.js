@@ -10,10 +10,12 @@ $(function () {
   let searchInput = $('#search_input');
   let apiKey = '9ZVefZRKvvSiLfY7f3pQ';
   let searchType = 'title'; // title, author by default 'all'
-  let inputTaskError = $('#input_task_error');
   let searchResults = $('#search_result');
   let count = $('#search_result_count');
   let response = $('#search_result_response');
+  // error variables
+  let inputTaskError = $('#input_task_error');
+  let searchResultErrror = $('#search_result_error');
 
   searchInput.on('focus', function () {
     inputTaskError.text('');
@@ -51,7 +53,7 @@ $(function () {
         let data = xmlToJson(xml);
         let books = data['query']['results']['GoodreadsResponse']['search']['results']['work'];
         if (books) {
-          $('#search_result_error').text('');
+          searchResultErrror.text('');
           count.text(books.length);
           response.text(data['query']['results']['GoodreadsResponse']['search']['query-time-seconds']['#text']);
           console.log(books);
@@ -66,7 +68,7 @@ $(function () {
             searchResults.append(bookDiv);
           });
         } else {
-          $('#search_result_error').text('no books found!');
+          searchResultErrror.text('No books found! Please try again.');
         }
       }
     );
