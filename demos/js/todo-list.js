@@ -12,7 +12,7 @@ $(function () {
   const editSVGIcon = './img/edit.svg';
   const updatedSVGIcon = './img/update.svg';
 
-  taskInputEle.on('focus', function () {
+  taskInputEle.on('focus, change', function () {
     inputTaskError.text('');
   });
 

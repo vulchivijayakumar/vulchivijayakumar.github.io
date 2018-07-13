@@ -21,6 +21,7 @@ $(function () {
 
   // input on change function
   searchInput.on('change', function () {
+    inputTaskError.text('');
     searchResults.empty();
     count.text('0');
     response.text('0');
