@@ -35,7 +35,7 @@ $(function () {
   // apicall function
   function apiCall (input, key, type) {
     var url = `https://www.goodreads.com/search/index.xml?q=${input}&key=${key}&search=${type}`;
-    $.get('http://query.yahooapis.com/v1/public/yql',
+    $.get('https://query.yahooapis.com/v1/public/yql',
       {
         // "select * from xml where url=\""+url+"\"",
         q: `select * from xml where url="${url}"`,
