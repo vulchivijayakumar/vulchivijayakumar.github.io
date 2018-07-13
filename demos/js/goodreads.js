@@ -9,7 +9,7 @@ $(function () {
   let searchBtn = $('#search_btn');
   let searchInput = $('#search_input');
   let apiKey = '9ZVefZRKvvSiLfY7f3pQ';
-  let searchType = 'all';
+  let searchType = 'title'; // title, author by default 'all'
   let inputTaskError = $('#input_task_error');
   let searchResults = $('#search_result');
   let count = $('#search_result_count');
