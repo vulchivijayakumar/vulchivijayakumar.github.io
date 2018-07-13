@@ -11,7 +11,9 @@ $(function () {
   let apiKey = '9ZVefZRKvvSiLfY7f3pQ';
   let searchType = 'all';
   let inputTaskError = $('#input_task_error');
-  let searchResults = $('#search_result')
+  let searchResults = $('#search_result');
+  let count = $('#search_result_count');
+  let response = $('#search_result_response');
 
   searchInput.on('focus', function () {
     inputTaskError.text('');
@@ -20,6 +22,8 @@ $(function () {
   // input on change function
   searchInput.on('change', function () {
     searchResults.empty();
+    count.text('0');
+    response.text('0');
     // apiCall(searchInput, apiKey, searchType);
   });
   // search button click function
@@ -45,8 +49,6 @@ $(function () {
         // console.log(xml);
         let data = xmlToJson(xml);
         let books = data['query']['results']['GoodreadsResponse']['search']['results']['work'];
-        let count = $('#search_result_count');
-        let response = $('#search_result_response');
         count.text(books.length);
         response.text(data['query']['results']['GoodreadsResponse']['search']['query-time-seconds']['#text']);
         console.log(books);
