@@ -39,7 +39,7 @@ $(function () {
   });
   // apicall function
   function apiCall (input, key, type) {
-    var url = `https://www.goodreads.com/search/index.xml?q=${input}&key=${key}&search=${type}`;
+    var url = `https://www.goodreads.com/search/index.xml?q=${input.replace(/ +/g, '-')}&key=${key}&search=${type}`;
     $.get('https://query.yahooapis.com/v1/public/yql',
       {
         // "select * from xml where url=\""+url+"\"",
