@@ -50,19 +50,24 @@ $(function () {
         // console.log(xml);
         let data = xmlToJson(xml);
         let books = data['query']['results']['GoodreadsResponse']['search']['results']['work'];
-        count.text(books.length);
-        response.text(data['query']['results']['GoodreadsResponse']['search']['query-time-seconds']['#text']);
-        console.log(books);
-        console.log(data['query']);
-        // response.text(books.)
-        books.forEach(function (item, index) {
-          let bookDiv = $('<div class="col-3"></div>');
-          let bookTitle = item['best_book']['title']['#text'];
-          let bookImage = item['best_book']['image_url']['#text'];
-          let figureTag = $('<figure><img src="' + bookImage + '" alt="" title=""/><figcaption>' + bookTitle + '</figcaption></figure>');
-          bookDiv.append(figureTag);
-          searchResults.append(bookDiv);
-        });
+        if (books) {
+          $('#search_result_error').text('');
+          count.text(books.length);
+          response.text(data['query']['results']['GoodreadsResponse']['search']['query-time-seconds']['#text']);
+          console.log(books);
+          console.log(data['query']);
+          // response.text(books.)
+          books.forEach(function (item, index) {
+            let bookDiv = $('<div class="col-3"></div>');
+            let bookTitle = item['best_book']['title']['#text'];
+            let bookImage = item['best_book']['image_url']['#text'];
+            let figureTag = $('<figure><img src="' + bookImage + '" alt="" title=""/><figcaption>' + bookTitle + '</figcaption></figure>');
+            bookDiv.append(figureTag);
+            searchResults.append(bookDiv);
+          });
+        } else {
+          $('#search_result_error').text('no books found!');
+        }
       }
     );
   }

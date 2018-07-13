@@ -151,6 +151,12 @@ button:hover {
   color: #ff3838;
 }
 
+.search-result-error {
+  padding: 5px 0;
+  font-size: 13px;
+  color: #ff3838;
+}
+
 /* search result styles */
 .search-results {
   margin: 15px 0;
