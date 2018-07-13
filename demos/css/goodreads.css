@@ -163,6 +163,47 @@ button:hover {
   overflow: hidden;
 }
 
+.search-results header {
+  overflow: hidden;
+  padding: 0;
+  border: none;
+}
+
+.search-results header h4 {
+  float: left;
+}
+
+.pagination-controls {
+  float: right;
+  visibility: hidden;
+}
+
+.pagination-controls.is-enable {
+  visibility: visible;
+}
+
+.pagination-controls a {
+  display: inline-block;
+  margin: 0 6px;
+  color: #18dcff;
+}
+
+.pagination-controls a:hover {
+  display: inline-block;
+  margin: 0 6px;
+  color: #17c0eb;
+}
+
+.pagination-prev.is-disable {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.pagination-next.is-disable {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 .search-results_child {
   margin: 5px 0 15px;
 }
@@ -185,6 +226,7 @@ button:hover {
   max-width: 100%;
   margin: 10px auto;
 }
+
 .search-results_child figcaption {
   position: absolute;
   right: 0;

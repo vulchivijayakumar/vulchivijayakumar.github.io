@@ -25,7 +25,13 @@
         </form>
       </div>
       <div class="search-results">
-        <h4>Search results : <span id="search_result_count">0</span> books found! Takes <span id="search_result_response">0</span> seconds!</h4>
+        <header>
+          <h4>Search results : <span id="search_result_count">0</span> books found.</h4>
+          <nav id="pagination_controls" class="pagination-controls">
+            <a id="pagination_prev" class="pagination-prev" href="#">Prev</a>
+            <a id="pagination_next" class="pagination-next" href="#">Next</a>
+          </nav>
+        </header>
         <span id="search_result_error" class="search-result-error"></span>
         <div id="search_result" class="search-results_child"></div>
       </div>
