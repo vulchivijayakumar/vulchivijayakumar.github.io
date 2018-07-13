@@ -47,6 +47,7 @@ $(function () {
   });
   // apicall function
   function apiCall (input, page, key, type) {
+    $('#current_page').text(page);
     var url = `https://www.goodreads.com/search/index.xml?q=${input}&page=${page}&key=${key}&search=${type}`;
     $.get('https://query.yahooapis.com/v1/public/yql',
       {
@@ -63,6 +64,7 @@ $(function () {
           paginationControls.addClass('is-enable');
           searchResultErrror.text('');
           totalBooks.text(allBooks);
+          $('#total_pages').text(Math.ceil(parseInt(totalBooks.text()) / 20));
           books.forEach(function (item, index) {
             let bookDiv = $('<div class="col-3"></div>');
             let bookTitle = item['best_book']['title']['#text'];
