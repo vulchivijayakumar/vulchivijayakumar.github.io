@@ -114,7 +114,7 @@ button img {
   margin: 0 auto;
 }
 
-.input_error {
+.input-error {
   position: absolute;
   top: -11px;
   left: 5px;

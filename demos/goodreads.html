@@ -4,9 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>goodreads from vulchi vijaya kuamr</title>
+    <link rel="stylesheet" href="./css/goodreads.css">
   </head>
   <body>
-    <h1>Goodreads API</h1>
+    <header>
+      <div class="container">
+        <h1>Find your favourite books from Goodreads.com</h1>
+      </div>
+    </header>
+    <div class="container">
+      <div class="card-box card-box--search">
+        <form action="" id="search_form" class="search-form">
+          <div class="input-field">
+            <input id="search_input" type="text" value="" placeholder="Type your favourite book name">
+            <span id="input_task_error" class="input-error"></span>
+          </div>
+          <div class="input-field search-field">
+            <button id="search_btn">Search</button>
+          </div>
+        </form>
+      </div>
+      <div class="search-results">
+        <h4>Search results : <span id="search_result_count">0</span> books found! Takes <span id="search_result_response">0</span> seconds!</h4>
+        <div id="search_result" class="search-results_child"></div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <p>&copy; 2018. Vijaya Kumar Vulchi</p>
+      </div>
+    </footer>
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/goodreads.js"></script>
   </body>

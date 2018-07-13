@@ -1,6 +1,5 @@
-let $ = jQuery; // $ defined to avoid jslinters error.
+let $ = jQuery; // $ defined to avoid jslinters to many $ errors.
 $(function () {
-  console.log('I am ready');
   // variables
   let taskInputEle = $('#input_task');
   let addTaskBtn = $('#addTaskBtn');

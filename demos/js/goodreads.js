@@ -3,29 +3,66 @@
   1. Should be able to search the books with name
   2. Interface to list the books with pagination
 */
-const $ = jQuery;
-$(document).ready(function () {
-  let searchInput = 'titan'; // $('#search_input'); // book names i.e anna
-  let apiKey = '9ZVefZRKvvSiLfY7f3pQ'; // goodreads api key
+const $ = jQuery; // $ defined to avoid jslinters to many $ errors.
+$(function () {
+  // variables
+  let searchBtn = $('#search_btn');
+  let searchInput = $('#search_input');
+  let apiKey = '9ZVefZRKvvSiLfY7f3pQ';
   let searchType = 'all';
-  var url = `https://www.goodreads.com/search/index.xml?q=${searchInput}&key=${apiKey}&search=${searchType}`;
-  $.get('http://query.yahooapis.com/v1/public/yql',
-    {
-      // "select * from xml where url=\""+url+"\"",
-      q: `select * from xml where url="${url}"`,
-      format: 'xml'
-    },
-    function (xml) {
-      // console.log(xml);
-      let data = xmlToJson(xml);
-      let books = data['query']['results']['GoodreadsResponse']['search']['results']['work'];
-      books.forEach(function (book, index) {
-        // [0]['best_book']['title']['#text']
-        console.log(book['best_book']['title']['#text']);
-        console.log(book['best_book']['image_url']['#text']);
-      });
+  let inputTaskError = $('#input_task_error');
+  let searchResults = $('#search_result')
+
+  searchInput.on('focus', function () {
+    inputTaskError.text('');
+  });
+
+  // input on change function
+  searchInput.on('change', function () {
+    searchResults.empty();
+    // apiCall(searchInput, apiKey, searchType);
+  });
+  // search button click function
+  searchBtn.on('click', function (e) {
+    if (searchInput.val() !== '') {
+      apiCall(searchInput.val(), apiKey, searchType);
+      searchInput.val('');
+    } else {
+      inputTaskError.text('This field can not be empty');
     }
-  );
+    e.preventDefault();
+  });
+  // apicall function
+  function apiCall (input, key, type) {
+    var url = `https://www.goodreads.com/search/index.xml?q=${input}&key=${key}&search=${type}`;
+    $.get('http://query.yahooapis.com/v1/public/yql',
+      {
+        // "select * from xml where url=\""+url+"\"",
+        q: `select * from xml where url="${url}"`,
+        format: 'xml'
+      },
+      function (xml) {
+        // console.log(xml);
+        let data = xmlToJson(xml);
+        let books = data['query']['results']['GoodreadsResponse']['search']['results']['work'];
+        let count = $('#search_result_count');
+        let response = $('#search_result_response');
+        count.text(books.length);
+        response.text(data['query']['results']['GoodreadsResponse']['search']['query-time-seconds']['#text']);
+        console.log(books);
+        console.log(data['query']);
+        // response.text(books.)
+        books.forEach(function (item, index) {
+          let bookDiv = $('<div class="col-3"></div>');
+          let bookTitle = item['best_book']['title']['#text'];
+          let bookImage = item['best_book']['image_url']['#text'];
+          let figureTag = $('<figure><img src="' + bookImage + '" alt="" title=""/><figcaption>' + bookTitle + '</figcaption></figure>');
+          bookDiv.append(figureTag);
+          searchResults.append(bookDiv);
+        });
+      }
+    );
+  }
 
   // Changes XML to JSON
   function xmlToJson (xml) {

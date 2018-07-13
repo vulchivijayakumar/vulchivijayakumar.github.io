@@ -1,0 +1,191 @@
+/* Goodreads stles */
+
+/* global styles */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html {
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #2f3542;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', arial;
+  background-color: #f9f9f9;
+  color: #2f3542;
+}
+
+header,
+footer {
+  padding: 15px 0;
+}
+
+header {
+  border-bottom: 1px solid #eee;
+}
+
+footer {
+  font-size: 12px;
+  border-top: 1px solid #eee;
+  color: #999999;
+}
+/* component Aka reusable styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.mb-sm {
+  margin-bottom: 20px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.heading-title {
+  margin: 10px 0 20px;
+}
+
+/* card box design */
+.card-box {
+  position: relative;
+  overflow: hidden;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,64,67,.16);
+}
+
+.card-box--search {
+  margin: 15px 0;
+}
+
+/* form styles */
+input,
+button {
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #18dcff;
+}
+
+button {
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #18dcff;
+  border-radius: 3px;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 350ms;
+}
+
+button:hover {
+  background-color: #17c0eb;
+}
+
+.search-form {
+  /*overflow: hidden;*/
+}
+
+.search-form .input-field {
+  float: left;
+  width: 85%;
+}
+
+.search-form .search-field {
+  width: 15%;
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-field input[type='text'] {
+  border-radius: 3px 0 0 3px;
+}
+
+.search-field button {
+  width: 100%;
+  letter-spacing: 1px;
+  border-radius: 0 3px 3px 0;
+}
+
+.input-error {
+  position: absolute;
+  top: -11px;
+  left: 5px;
+  padding: 2px 5px;
+  font-size: 13px;
+  background-color: #fff;
+  color: #ff3838;
+}
+
+/* search result styles */
+.search-results {
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.search-results_child {
+  margin: 5px 0 15px;
+}
+
+.search-results_child .col-3 {
+  position: relative;
+  height: 226px;
+  overflow: hidden;
+  width: 23%;
+  vertical-align: top;
+  text-align: center;
+  display: inline-block;
+  margin: 1%;
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,64,67,.16);
+}
+
+.search-results_child img {
+  max-width: 100%;
+  margin: 10px auto;
+}
+.search-results_child figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-height: 55px;
+  padding: 10px;
+  font-size: 13px;
+  background-color: #f6f6f6;
+}
