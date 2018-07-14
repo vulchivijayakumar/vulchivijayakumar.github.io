@@ -28,6 +28,10 @@ ul {
   list-style: none;
 }
 
+p {
+  font-size: 14px;
+}
+
 body {
   font-size: 16px;
   font-family: 'Open Sans', arial;
@@ -44,6 +48,7 @@ footer {
   font-size: 12px;
   color: #999999;
 }
+
 /* component Aka reusable styles */
 .container {
   max-width: 800px;
@@ -61,6 +66,27 @@ footer {
 
 .heading-title {
   margin: 10px 0 20px;
+}
+
+.link {
+  color: #7d5fff;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #7158e2;
+}
+
+.row {
+  overflow: hidden;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
 }
 
 /* card box design */
