@@ -47,6 +47,7 @@ $(function () {
   });
   // apicall function
   function apiCall (input, page, key, type) {
+    $('#search_loader').addClass('is-active');
     $('#current_page').text(page);
     var url = `https://www.goodreads.com/search/index.xml?q=${input}&page=${page}&key=${key}&search=${type}`;
     $.get('https://query.yahooapis.com/v1/public/yql',
@@ -74,6 +75,7 @@ $(function () {
             searchResults.append(bookDiv);
           });
           paginationController();
+          $('#search_loader').removeClass('is-active');
         } else {
           paginationControls.removeClass('is-enable');
           searchResultErrror.text('No books found! Please try again.');

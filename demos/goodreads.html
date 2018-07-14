@@ -25,12 +25,15 @@
         </form>
       </div>
       <div class="search-results">
+        <span id="search_loader" class="loader"></span>
         <header>
-          <h4>Search results : <span id="search_result_count">0</span> books found.</h4>
-          <nav id="pagination_controls" class="pagination-controls">
+          <p>Books available: <span id="search_result_count">0</span>.</p>
+          <div id="pagination_controls" class="pagination-controls">
             <span>Pages: <span id="current_page">0</span>/<span id="total_pages">0</span></span>
-            <a id="pagination_prev" class="pagination-prev" href="#">Prev</a>
-            <a id="pagination_next" class="pagination-next" href="#">Next</a>
+            <nav>
+              <a id="pagination_prev" class="pagination-prev" href="#">Prev</a>
+              <a id="pagination_next" class="pagination-next" href="#">Next</a>
+            </div>
           </nav>
         </header>
         <span id="search_result_error" class="search-result-error"></span>

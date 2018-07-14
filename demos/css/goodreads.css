@@ -159,23 +159,29 @@ button:hover {
 
 /* search result styles */
 .search-results {
+  position: relative;
   margin: 15px 0;
   overflow: hidden;
 }
 
 .search-results header {
   overflow: hidden;
-  padding: 0;
+  padding: 5px 0 0;
   border: none;
 }
 
-.search-results header h4 {
-  float: left;
+.search-results header p {
+  font-size: 14px;
 }
 
 .pagination-controls {
-  float: right;
+  overflow: hidden;
   visibility: hidden;
+  font-size: 14px;
+}
+
+.pagination-controls nav {
+  float: right;
 }
 
 .pagination-controls.is-enable {
@@ -236,6 +242,34 @@ button:hover {
   padding: 10px;
   font-size: 13px;
   background-color: #f6f6f6;
+}
+
+/* loader */
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  left: 50%;
+  height: 2px;
+  background-color: #17c0eb;
+}
+
+.loader.is-active::before {
+  animation: loader 600ms infinite both;
+}
+
+@keyframes loader {
+  from { right: 50%; left: 50%; }
+  to { left: 0; right: 0; }
 }
 
 @media screen and (min-width: 640px) {
