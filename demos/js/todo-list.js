@@ -133,7 +133,6 @@ $(function () {
   };
 
   let taskCompleted = function () {
-    console.log('taskCompleted');
     var listItem = $(this).parent().parent();
     var label = listItem.find('label');
     completedTaskBlock.append(listItem);
@@ -184,7 +183,6 @@ $(function () {
   };
 
   let currentTask = function () {
-    console.log('currentTask');
     var listItem = $(this).parent().parent();
     var label = listItem.find('label');
     currentTaskBlock.append(listItem);
@@ -201,15 +199,12 @@ $(function () {
         myLocalStorage.setItem('vj-completed-tasks', JSON.stringify(localStorageJson));
       }
     }
-    console.log(myLocalStorage);
     if (myLocalStorage.getItem('vj-current-tasks')) {
-      console.log('true');
       currnetTasksObject = JSON.parse(myLocalStorage.getItem('vj-current-tasks'));
       key = `task-${myLocalStorageTaskCount}`;
       currnetTasksObject[key] = label.text();
       myLocalStorage.setItem('vj-current-tasks', JSON.stringify(currnetTasksObject));
     } else {
-      console.log('false');
       key = `task-${myLocalStorageTaskCount}`;
       currnetTasksObject[key] = label.text();
       myLocalStorage.setItem('vj-current-tasks', JSON.stringify(currnetTasksObject));
@@ -251,7 +246,7 @@ $(function () {
       for (var complTask in localStorageJson) {
         var complListItem = createTask(localStorageJson[complTask]);
         completedTaskBlock.append(complListItem);
-        bindTaskEvents(complListItem, taskCompleted);
+        bindTaskEvents(complListItem, currentTask);
       }
     }
   } else {
