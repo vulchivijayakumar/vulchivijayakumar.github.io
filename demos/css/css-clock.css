@@ -1,0 +1,69 @@
+/* css clock */
+.container {
+  text-align: center;
+}
+
+.clock {
+  position: relative;
+  z-index: 0;
+  display: inline-block;;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.digital-clock {
+  position: absolute;
+  z-index: 0;
+  top: 40px;
+  left: 50px;
+  width: 100px;
+  height: 35px;
+  background-color: #000;
+  color: #fff;
+}
+
+.digital-clock span {
+  font-family: monospace;
+  line-height: 35px;
+}
+
+.niddle {
+  position: absolute;
+  z-index: 1;
+  left: 10px;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  /*transition: transform 200ms;*/
+  width: 90px;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-shadow: 0 0 2px rgba(0,0,0,0.24), 0 0 4px rgba(0,0,0,0.24);
+}
+
+.dot {
+  z-index: 2;
+  transform-origin: inherit;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.niddle--hours {
+  top: calc(50% - 4px);
+  height: 6px;
+}
+
+.niddle--minutes {
+  top: calc(50% - 3.5px);
+  height: 5px;
+}
+
+.niddle--seconds {
+  top: calc(50% - 3px);
+  height: 4px;
+}

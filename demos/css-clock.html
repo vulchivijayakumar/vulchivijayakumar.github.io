@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript 30 - CSS clock</title>
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/css-clock.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="clock">
+        <div class="digital-clock">
+          <span class="digits-hours"></span>
+          : <span class="digits-minutes"></span>
+          : <span class="digits-seconds"></span>
+        </div>
+        <div class="niddle dot"></div>
+        <div class="niddle niddle--hours"></div>
+        <div class="niddle niddle--minutes"></div>
+        <div class="niddle niddle--seconds"></div>
+      </div>
+    </div>
+    <script>
+      const niddleHours = document.querySelector('.niddle--hours');
+      const niddleMinutes = document.querySelector('.niddle--minutes');
+      const niddleSeconds = document.querySelector('.niddle--seconds');
+      const digitalHours = document.querySelector('.digits-hours');
+      const digitalMinutes = document.querySelector('.digits-minutes');
+      const digitalSeconds = document.querySelector('.digits-seconds');
+      function setDate () {
+        const now = new Date();
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+        niddleHours.style.transform = `rotate(${((hours/60) * 360) + 90}deg)`;
+        niddleMinutes.style.transform = `rotate(${((minutes/60) * 360) + 90}deg)`;
+        niddleSeconds.style.transform = `rotate(${((seconds/60) * 360) + 90}deg)`;
+        digitalHours.innerHTML = hours - 12;
+        digitalMinutes.innerHTML = minutes;
+        digitalSeconds.innerHTML = seconds;
+      }
+      setInterval(setDate, 1000);
+    </script>
+  </body>
+</html>
