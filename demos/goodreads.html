@@ -7,37 +7,39 @@
     <link rel="stylesheet" href="./css/goodreads.css">
   </head>
   <body>
-    <header>
+    <div class="main-container">
+      <header>
+        <div class="container">
+          <h1>Find your favourite books from Goodreads.com</h1>
+        </div>
+      </header>
       <div class="container">
-        <h1>Find your favourite books from Goodreads.com</h1>
-      </div>
-    </header>
-    <div class="container">
-      <div class="card-box card-box--search">
-        <form action="" id="search_form" class="search-form">
-          <div class="input-field">
-            <input id="search_input" type="text" value="" placeholder="Type your favourite book name">
-            <span id="input_task_error" class="input-error"></span>
-          </div>
-          <div class="input-field search-field">
-            <button id="search_btn">Search</button>
-          </div>
-        </form>
-      </div>
-      <div class="search-results">
-        <span id="search_loader" class="loader"></span>
-        <header>
-          <p>Books available: <span id="search_result_count">0</span>.</p>
-          <div id="pagination_controls" class="pagination-controls">
-            <span>Pages: <span id="current_page">0</span>/<span id="total_pages">0</span></span>
-            <nav>
-              <a id="pagination_prev" class="pagination-prev" href="#">Prev</a>
-              <a id="pagination_next" class="pagination-next" href="#">Next</a>
+        <div class="card-box card-box--search">
+          <form action="" id="search_form" class="search-form">
+            <div class="input-field">
+              <input id="search_input" type="text" value="" placeholder="Type your favourite book name">
+              <span id="input_task_error" class="input-error"></span>
             </div>
-          </nav>
-        </header>
-        <span id="search_result_error" class="search-result-error"></span>
-        <div id="search_result" class="search-results_child"></div>
+            <div class="input-field search-field">
+              <button id="search_btn">Search</button>
+            </div>
+          </form>
+        </div>
+        <div class="search-results">
+          <span id="search_loader" class="loader"></span>
+          <header>
+            <p>Books available: <span id="search_result_count">0</span>.</p>
+            <div id="pagination_controls" class="pagination-controls">
+              <span>Pages: <span id="current_page">0</span>/<span id="total_pages">0</span></span>
+              <nav>
+                <a id="pagination_prev" class="pagination-prev" href="#">Prev</a>
+                <a id="pagination_next" class="pagination-next" href="#">Next</a>
+              </div>
+            </nav>
+          </header>
+          <span id="search_result_error" class="search-result-error"></span>
+          <div id="search_result" class="search-results_child"></div>
+        </div>
       </div>
     </div>
     <footer>
