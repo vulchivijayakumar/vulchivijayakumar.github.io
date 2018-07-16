@@ -49,6 +49,31 @@ footer {
   color: #999999;
 }
 
+/* sticky footer */
+html,
+body {
+     height: 100%;
+}
+
+header {
+  height: 92px;
+}
+
+.main-container {
+  min-height: 100%;
+  margin-bottom: -49px;
+}
+
+.main-container:after {
+  content: "";
+  display: block;
+}
+
+.main-container:after,
+footer {
+  height: 49px;
+}
+
 /* component Aka reusable styles */
 .container {
   max-width: 800px;
