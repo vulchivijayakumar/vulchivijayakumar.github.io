@@ -18,11 +18,20 @@ html {
 
 a {
   text-decoration: none;
-  color: #111;
+  color: #70a1ff;
 }
 
 a:hover {
-  color: #000;
+  color: #1e90ff;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+ol {
+  padding-left: 15px;
 }
 
 /* font-face */
