@@ -1,12 +1,22 @@
 /* css clock */
+html,
+body {
+  height: 100%;
+}
+
 .container {
+  position: relative;
+  min-height: 100%;
   text-align: center;
 }
 
 .clock {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 0;
-  display: inline-block;;
+  display: inline-block;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -20,8 +30,7 @@
   left: 50px;
   width: 100px;
   height: 35px;
-  background-color: #000;
-  color: #fff;
+  color: #000;
 }
 
 .digital-clock span {
