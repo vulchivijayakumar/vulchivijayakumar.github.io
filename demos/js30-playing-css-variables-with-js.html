@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript 30 - CSS clock</title>
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/css-variable-with-js.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Apply css variables with <span class="base-color">js</span></h2>
+      <div class="controllers">
+        <label for="spacing">Spacing</label>
+        <input type="range" name="spacing" min="0" max="200" value="10" data-sizing="px">
+        <label for="blur">Blur</label>
+        <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+        <label for="base-color">Base Color</label>
+        <input type="color" name="base-color" value="#f00">
+      </div>
+      <figure>
+        <img src="./img/dummy.jpg" alt="sample-image">
+      </figure>
+    </div>
+    <script>
+      const inputs = document.querySelectorAll('.controllers input');
+      function updateHandler () {
+
+      }
+      inputs.forEach(input => input.addEventListener ('change', updateHandler));
+    </script>
+  </body>
+</html>

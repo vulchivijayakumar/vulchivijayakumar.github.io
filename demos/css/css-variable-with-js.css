@@ -1,0 +1,21 @@
+/* playing with css variable with js styles */
+:root {
+  --base: #f00;
+  --space: 10px;
+  --blur: 10px;
+}
+
+figure {
+  margin: 15px 0;
+}
+
+figure img {
+  display: block;
+  padding: var(--space);
+  background-color: var(--base);
+  filter: blur(var(--blur));
+}
+
+.base-color {
+  color: var(--base);
+}

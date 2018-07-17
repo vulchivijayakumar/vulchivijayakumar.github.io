@@ -34,6 +34,10 @@ ol {
   padding-left: 15px;
 }
 
+img {
+  max-width: 100%;
+}
+
 /* font-face */
 
 @font-face {
