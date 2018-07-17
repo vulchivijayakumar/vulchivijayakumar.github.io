@@ -1,7 +1,7 @@
 /* playing with css variable with js styles */
 :root {
-  --base: #f00;
-  --space: 10px;
+  --base-color: #f00;
+  --spacing: 10px;
   --blur: 10px;
 }
 
@@ -11,11 +11,11 @@ figure {
 
 figure img {
   display: block;
-  padding: var(--space);
-  background-color: var(--base);
+  padding: var(--spacing);
+  background-color: var(--base-color);
   filter: blur(var(--blur));
 }
 
 .base-color {
-  color: var(--base);
+  color: var(--base-color);
 }

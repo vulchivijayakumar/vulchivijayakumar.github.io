@@ -16,7 +16,7 @@
         <label for="blur">Blur</label>
         <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
         <label for="base-color">Base Color</label>
-        <input type="color" name="base-color" value="#f00">
+        <input type="color" name="base-color" value="#ff0000">
       </div>
       <figure>
         <img src="./img/dummy.jpg" alt="sample-image">
@@ -25,6 +25,8 @@
     <script>
       const inputs = document.querySelectorAll('.controllers input');
       function updateHandler () {
+        const suffix = this.dataset.sizing || '';
+        document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
 
       }
       inputs.forEach(input => input.addEventListener ('change', updateHandler));
