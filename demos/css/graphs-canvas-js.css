@@ -119,6 +119,10 @@ footer {
   border-radius: 5px;
 }
 
+.canvas-height-xlg {
+  height: 430px;
+}
+
 .canvas-height-lg {
   height: 250px;
 }

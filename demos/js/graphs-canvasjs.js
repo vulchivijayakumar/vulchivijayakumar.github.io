@@ -42,6 +42,7 @@ $(function () {
 		},
 		data: [{        
 			type: 'spline',
+			lineThickness: 3,
 			markerType: 'none',
 			lineColor: '#0C785B',
 			dataPoints: [
@@ -102,6 +103,7 @@ $(function () {
 		},
 		data: [{        
 			type: 'line',
+			lineThickness: 3,
 			markerType: 'none',
 			lineColor: '#0C785B',
 			dataPoints: [
@@ -193,6 +195,7 @@ $(function () {
 		},
 		data: [{        
 			type: 'spline',
+			lineThickness: 3,
 			markerType: 'none',
 			lineColor: '#0C785B',
 			dataPoints: [
@@ -253,6 +256,7 @@ $(function () {
 		},
 		data: [{        
 			type: 'line',
+			lineThickness: 3,
 			markerType: 'none',
 			lineColor: '#0C785B',
 			dataPoints: [
