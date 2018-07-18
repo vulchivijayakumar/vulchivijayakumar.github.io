@@ -4,18 +4,96 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Canvasjs - Vulchi Vijaya Kumar</title>
-    <link rel="stylesheet" href="./css/master.css">
     <link rel="stylesheet" href="./css/graphs-canvas-js.css">
   </head>
   <body>
     <header>
-      <div class="container"></div>
+      <div class="container">
+        header
+      </div>
     </header>
-    <div class="container">
-      <div id="chartContainer"></div>
+    <div class="container dash-board">
+      <aside class="side-menu">
+        <nav>
+          <a href="#">link</a>
+          <a href="#">link</a>
+          <a href="#">link</a>
+          <a href="#">link</a>
+        </nav> 
+      </aside>
+      <div class="graph-boards">
+        <div class="row mb-sm">
+          <div class="col col-6 canvas-container canvas-height-lg">
+            <div class="card-box">
+              <div id="sessions_last_month"></div>
+            </div>
+          </div>
+          <div class="col col-6 canvas-container canvas-height-lg">
+            <div class="card-box">
+              <div id="sessions_this_month"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-sm">
+          <div class="col col-6">
+            <div class="row mb-sm">
+              <div class="col col-6 canvas-container canvas-height-lg">
+                <div class="card-box">
+                  <div id="users_type">user type</div>
+                </div>
+              </div>
+              <div class="col col-6 canvas-container canvas-height-lg">
+                <div class="card-box">
+                  <div id="user_last_month">user last month</div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-sm">
+              <div class="col cusers_last_monthol-6 canvas-container canvas-height-lg">
+                <div class="card-box">
+                  <div id="bounce_rate">bounce rate</div>
+                </div>
+              </div>
+              <div class="col col-6 canvas-container canvas-height-lg">
+                <div class="card-box">
+                  <div id="">top contries</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-6">
+            <div class="row mb-sm">
+              <div class="col col-6 canvas-container canvas-height-lg">
+                <div class="card-box">
+                  <div id="users_this_month">users this month</div>
+                </div>
+              </div>
+              <div class="col col-6 canvas-container canvas-height-lg">
+                <div class="card-box">
+                  <div id="social_referral">Social referrals</div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-sm">
+              <div class="col col-6 canvas-container canvas-height-lg">
+                <div class="card-box">
+                  <div id="search_keywords">Search keywords</div>
+                </div>
+              </div>
+              <div class="col col-6 canvas-container canvas-height-lg">
+                <div class="card-box">
+                  <div id="referring_sites">Referring sites</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <footer>
-      <div class="container"></div>
+      <div class="container">
+        footer
+      </div>
     </footer>
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/vendor/jquery.canvasjs.min.js"></script>

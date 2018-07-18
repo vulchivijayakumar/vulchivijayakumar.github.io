@@ -1,1 +1,133 @@
 /* graphs using canvasjs pulgin */
+
+/*line code #407769*/
+:root {
+  --primary-dark: #2B2B2B;
+  --theme-bg-color: #343536;
+  --theme-color: #ffffff;
+  --theme-header-color: #424242;
+  --primary-header-height: 50px;
+  --aside-width: 60px;
+  --primary-footer-height: 30px;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* overwrite canvasjs styels */
+.canvasjs-chart-credit {
+  display: none !important;
+}
+
+.canvasjs-chart-toolbar button {
+  background-color: var(--primary-dark) !important;
+  color: var(--theme-bg-color) !important;
+}
+
+body {
+  font-family: monospace, sans-serif, serif;
+  font-size: 16px;
+  background-color: var(--theme-bg-color);
+  color: var(--theme-color);
+}
+
+header {
+  background-color: var(--theme-header-color);
+  height: var(--primary-header-height);
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  height: var(--primary-footer-height);
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* grid system */
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  overflow: hidden;
+}
+
+.col {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-6 {
+  float: left;
+  width: 50%;
+}
+
+.mb-sm {
+  margin-bottom: 15px;
+}
+
+.dash-board {
+  height: calc(100% - (var(--primary-header-height) + var(--primary-footer-height)));
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.dash-board .side-menu,
+.dash-board .graph-boards {
+  float: left;
+}
+
+.side-menu {
+  width: var(--aside-width);
+}
+
+.graph-boards {
+  width: calc(100% - var(--aside-width));
+  padding: 15px;
+}
+
+.card-box {
+  background-color: var(--primary-dark);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.canvas-height-lg {
+  height: 280px;
+}
+
+.canvas-container > div,
+.canvas-container > div > div {
+  height: 100%;
+}
+
+.canvas-container > div {
+  padding: 15px;
+}
