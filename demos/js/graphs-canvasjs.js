@@ -266,9 +266,85 @@ $(function () {
 		}]
 	});
 
+	var socialReferral = new CanvasJS.Chart('social_referral', {
+		animationEnabled: true,
+		exportEnabled: true,
+		backgroundColor: '#2B2B2B',
+		title:{
+			text: 'USER TYPE',
+			fontFamily: 'tahoma',
+			fontColor: '#797974',
+			fontSize: 16
+		},
+		subtitles:[
+			{
+				text: 'g',
+				fontFamily: 'tahoma',
+				fontSize: 20,
+				fontColor: '#0C785B',
+				horizontalAlign: 'left',
+				verticalAlign: 'top'
+			},
+			{
+				text: 'this month',
+				fontFamily: "tahoma",
+				fontColor: '#797974',
+				horizontalAlign: 'left',
+				verticalAlign: 'bottom'
+			}
+		],
+		data: [{        
+			type: 'doughnut',
+			startAngle: 270,
+			dataPoints: [
+				{ y: 93.6, color: '#0C785B' },
+				{ y: 6.4, color: '#00A564' }
+			]
+		}]
+	});
+
+	var bounceRate = new CanvasJS.Chart('bounce_rate', {
+		animationEnabled: true,
+		exportEnabled: true,
+		backgroundColor: '#2B2B2B',
+		title:{
+			text: 'USER TYPE',
+			fontFamily: 'tahoma',
+			fontColor: '#797974',
+			fontSize: 16
+		},
+		subtitles:[
+			{
+				text: 'g',
+				fontFamily: 'tahoma',
+				fontSize: 20,
+				fontColor: '#0C785B',
+				horizontalAlign: 'left',
+				verticalAlign: 'top'
+			},
+			{
+				text: 'this month',
+				fontFamily: "tahoma",
+				fontColor: '#797974',
+				horizontalAlign: 'left',
+				verticalAlign: 'bottom'
+			}
+		],
+		data: [{        
+			type: 'doughnut',
+			startAngle: 250,
+			dataPoints: [
+				{ y: 78.3, color: '#0C785B' },
+				{ y: 21.7, color: '#343536' }
+			]
+		}]
+	});
+
 	sessionsLastMonth.render();
 	sessionsThisMonth.render();
 	userType.render();
 	usersLastMonth.render();
 	usersThisMonth.render();
+	socialReferral.render();
+	bounceRate.render();
 });

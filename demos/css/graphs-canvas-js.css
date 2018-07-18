@@ -90,7 +90,7 @@ footer {
 }
 
 .mb-sm {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .dash-board {
@@ -115,12 +115,16 @@ footer {
 
 .card-box {
   background-color: var(--primary-dark);
-  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.24);
   border-radius: 5px;
 }
 
 .canvas-height-lg {
-  height: 280px;
+  height: 250px;
+}
+
+.canvas-height-md {
+  height: 200px;
 }
 
 .canvas-container > div,
