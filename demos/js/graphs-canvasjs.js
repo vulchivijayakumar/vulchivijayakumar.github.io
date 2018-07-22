@@ -1,11 +1,12 @@
 // graphs canvasjs
 const $ = jQuery;
 $(function () {
+	// chart styles
 	var sessionsLastMonth = new CanvasJS.Chart('sessions_last_month', {
 		animationEnabled: true,
 		exportEnabled: true,
 		backgroundColor: '#2B2B2B',
-		title:{
+		title: {
 			text: 'SESSIONS: LAST MONTH',
 			fontFamily: 'tahoma',
 			fontColor: '#797974',
@@ -40,7 +41,7 @@ $(function () {
 			valueFormatString: ' ',
 			gridThickness: 0
 		},
-		data: [{        
+		data: [{
 			type: 'spline',
 			lineThickness: 3,
 			markerType: 'none',
@@ -101,7 +102,7 @@ $(function () {
 			valueFormatString: ' ',
 			gridThickness: 0
 		},
-		data: [{        
+		data: [{
 			type: 'line',
 			lineThickness: 3,
 			markerType: 'none',
@@ -144,7 +145,7 @@ $(function () {
 				verticalAlign: 'bottom'
 			}
 		],
-		data: [{        
+		data: [{
 			type: 'pie',
 			startAngle: 270,
 			dataPoints: [
@@ -193,7 +194,7 @@ $(function () {
 			valueFormatString: ' ',
 			gridThickness: 0
 		},
-		data: [{        
+		data: [{
 			type: 'spline',
 			lineThickness: 3,
 			markerType: 'none',
@@ -254,7 +255,7 @@ $(function () {
 			valueFormatString: ' ',
 			gridThickness: 0
 		},
-		data: [{        
+		data: [{
 			type: 'line',
 			lineThickness: 3,
 			markerType: 'none',
@@ -297,7 +298,7 @@ $(function () {
 				verticalAlign: 'bottom'
 			}
 		],
-		data: [{        
+		data: [{
 			type: 'doughnut',
 			startAngle: 270,
 			dataPoints: [
@@ -334,7 +335,7 @@ $(function () {
 				verticalAlign: 'bottom'
 			}
 		],
-		data: [{        
+		data: [{
 			type: 'doughnut',
 			startAngle: 250,
 			dataPoints: [
@@ -352,3 +353,21 @@ $(function () {
 	socialReferral.render();
 	bounceRate.render();
 });
+
+// json
+// var dataPoints = [];
+// var chart = new CanvasJS.Chart("chartContainer",{
+//     title:{
+//         text:"Rendering Chart with dataPoints from External JSON"
+//     },
+//     data: [{
+//         type: "line",
+//         dataPoints : dataPoints,
+//     }]
+// });
+// $.getJSON("https://canvasjs.com/services/data/datapoints.php?xstart=1&ystart=10&length=100&type=json", function(data) {
+//     $.each(data, function(key, value){
+//         dataPoints.push({x: value[0], y: parseInt(value[1])});
+//     });
+//     chart.render();
+// });
