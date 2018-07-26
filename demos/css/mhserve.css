@@ -214,11 +214,11 @@ footer p span {
 .home {
   position: relative;
   z-index: 999;
-  background-image: url(../img/hmserve-1.jpg);
+  color: var(--color-white);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--color-white);
+  background-image: url('../img/hmserve-1.jpg');
 }
 
 .home::before {
