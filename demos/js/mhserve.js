@@ -12,12 +12,15 @@ $(document).ready(function () {
   });
 
   $('.mobile-burger').on('click', function () {
-    $(this).toggleClass();
+    $(this).toggleClass('is--active');
   });
 
   // navigation
   $('.primary-nav a').on('click', function () {
     $('.primary-nav a').removeClass('is--active');
     $(this).addClass('is--active');
+    setTimeout(function () {
+      $('.mobile-burger').removeClass('is--active');
+    }, 100);
   });
 });

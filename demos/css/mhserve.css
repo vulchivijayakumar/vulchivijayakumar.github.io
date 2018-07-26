@@ -111,6 +111,7 @@ header {
 
 .primary-nav a {
   display: block;
+  padding: 15px 0;
 }
 
 .container {
@@ -195,6 +196,22 @@ section p:first-child {
 
 .mobile-burger::before {
   bottom: -10px;
+}
+
+.mobile-burger.is--active {
+  height: 0;
+}
+
+.mobile-burger.is--active::after,
+.mobile-burger.is--active::before {
+  background-color: #087CE6;
+}
+
+
+
+.mobile-burger.is--active + .primary-nav {
+  padding: 15px 0;
+  display: block;
 }
 
 .primary-nav {
