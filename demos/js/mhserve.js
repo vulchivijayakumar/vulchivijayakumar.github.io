@@ -2,6 +2,8 @@
 const $ = jQuery;
 
 $(document).ready(function () {
+  // setting height for home section
+  $('#home').height($(window).innerHeight());
   // adding class to sticky header
   $(document).scroll(function () {
     if ($(this).scrollTop() > 50) {
