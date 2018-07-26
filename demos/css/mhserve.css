@@ -1,0 +1,219 @@
+/* @vulchi.vijay */
+
+@font-face {
+  font-family: 'source-sanspro-regular';
+  src: url('../fonts/source-sanspro-regular.woff2') format('woff2'),
+       url('../fonts/source-sanspro-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover,
+a.is--active {
+  color: #087CE6;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'source-sanspro-regular', sans-serif, arial;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.sticky-header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #ffffff;
+  /*transition: all .3s ease 0s;*/
+}
+
+.sticky-header.sticky-header--active {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.24);
+}
+
+header {
+  overflow: hidden;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.theme-color {
+  color: #087CE6;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #087CE6;
+}
+
+.logo figure {
+  max-width: 220px;
+  display: inline-block;
+}
+
+.logo img,
+.logo figcaption {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.logo img {
+  width: 60px;
+}
+
+/*.sticky-header--active .logo img {
+  width: 50px;
+}
+
+.sticky-header--active .primary-nav {
+  margin: 15px 0;
+}*/
+
+.logo span {
+  display: block;
+}
+
+.primary-nav a {
+  display: block;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 15px;
+  max-width: 1200px;
+}
+
+section {
+  padding-top: 94px;
+}
+
+.home {
+  position: relative;
+  z-index: 999;
+  min-height: 606px;
+  background-image: url(../img/hmserve-1.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home .container {
+  position: relative;
+  z-index: 100;
+}
+
+.title-heading {
+  text-transform: capitalize;
+  padding: 25px 0;
+  font-size: 30px;
+}
+
+h3,
+p {
+  padding-bottom: 15px;
+}
+
+section p:first-child {
+  padding-left: 30px;
+}
+
+.border-top-gray {
+  border-top: 1px solid #dddddd;
+}
+
+.mobile-burger {
+  position: relative;
+  width: 40px;
+  height: 2px;
+  float: right;
+  margin: 31px 0;
+  display: inline-block;
+  background-color: #000000;
+}
+
+.mobile-burger::after,
+.mobile-burger::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+}
+
+.mobile-burger::after {
+  top: -10px;
+}
+
+.mobile-burger::before {
+  bottom: -10px;
+}
+
+.primary-nav {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-burger {
+    display: none;
+  }
+
+  .primary-nav {
+    float: right;
+    display: inline-block;
+    margin: 20px 0;
+  }
+
+  .primary-nav a {
+    margin: 0 15px;
+    display: inline-block;
+  }
+}
