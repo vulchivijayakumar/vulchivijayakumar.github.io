@@ -3,7 +3,14 @@ const $ = jQuery;
 
 $(document).ready(function () {
   // setting height for home section
-  $('#home').height($(window).innerHeight());
+  function homeSliderHeight () {
+    $('#home .container').css('min-height', $(window).innerHeight());
+  }
+  homeSliderHeight();
+  $(window).resize(function () {
+    console.log('test');
+    homeSliderHeight();
+  });
   // adding class to sticky header
   $(document).scroll(function () {
     if ($(this).scrollTop() > 50) {
