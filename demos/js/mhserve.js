@@ -4,11 +4,10 @@ const $ = jQuery;
 $(document).ready(function () {
   // setting height for home section
   function homeSliderHeight () {
-    $('#home .container').css('min-height', $(window).innerHeight());
+    $('#home .container').css('min-height', $(window).innerHeight() - $('header').innerHeight());
   }
   homeSliderHeight();
   $(window).resize(function () {
-    console.log('test');
     homeSliderHeight();
   });
   // adding class to sticky header
@@ -31,5 +30,11 @@ $(document).ready(function () {
     setTimeout(function () {
       $('.mobile-burger').removeClass('is--active');
     }, 100);
+  });
+
+  $('#hmserver_form').validate({
+    submitHandler: function (form) {
+      form.submit();
+    }
   });
 });

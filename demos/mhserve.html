@@ -35,7 +35,7 @@
           <div class="all-center">
             <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni vero quaerat, nostrum, laborum porro vel officiis est sequi recusandae dignissimos mollitia, non maiores repudiandae tempore minima facilis temporibus? Inventore, delectus.</p>
-            <button class="btn">Send Mail</button>
+            <a href="#contactus" class="btn">Send Mail</a>
           </div>
         </div>
       </section>
@@ -63,25 +63,54 @@
         </section>
         <section id="contactus" class="contact-us">
           <h1 class="title-heading">contact us</h1>
-          <div class="google-map"><iframe src="https://maps.google.com/maps?width=100%&height=600&hl=en&coord=13.0906723, 80.28866790000006&q=Om%20Sri%20Sai%20Ram%20Plaza%2075%2C%20Thambu%20Chetty%20St%20Mannady%2C%20Chennai+(HANUVA%20MARINE%20SERVICES)&ie=UTF8&t=&z=17&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/en/custom-google-maps/">Add Google Map to website</a> by <a href="https://www.mapsdirections.info/en/">Measure area on map</a></iframe></div><br />
-          <address class="company-address">
-            HANUVA MARINE SERVICES<br/>
-            Office no. 54, 3rd Floor<br/>
-            Om Sri Sai Ram Plaza<br/>
-            75, Thambu Chetty St<br/>
-            Mannady, Chennai-01<br/>
-            Ph: 9384560569<br/>
-            Email: service@hmserve.com,<br/>sales@hmserve.com
-          </address>
+          <div class="row">
+            <div class="col col-map">
+              <div class="google-map"><iframe src="https://maps.google.com/maps?width=100%&height=600&hl=en&coord=13.0906723, 80.28866790000006&q=Om%20Sri%20Sai%20Ram%20Plaza%2075%2C%20Thambu%20Chetty%20St%20Mannady%2C%20Chennai+(HANUVA%20MARINE%20SERVICES)&ie=UTF8&t=&z=17&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/en/custom-google-maps/">Add Google Map to website</a> by <a href="https://www.mapsdirections.info/en/">Measure area on map</a></iframe></div><br />
+              <address class="company-address">
+                HANUVA MARINE SERVICES<br/>
+                Office no. 54, 3rd Floor<br/>
+                Om Sri Sai Ram Plaza<br/>
+                75, Thambu Chetty St<br/>
+                Mannady, Chennai-01<br/>
+                Ph: 9384560569<br/>
+                Email: service@hmserve.com,<br/>sales@hmserve.com
+              </address>
+            </div>
+            <div  id="hmserver_form" class="col col-form">
+              <h3 class="mobile-emailus-label">Email Us</h3>
+              <form action="" method="get" class="form">
+                <div class="form-field">
+                  <label for="#emailus_name">Name <span>*</span></label>
+                  <input type="text" id="emailus_name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-field">
+                  <label for="#emailus_phone">Phone</label>
+                  <input type="number" id="emailus_phone" placeholder="Enter your mobile number">
+                </div>
+                <div class="form-field">
+                  <label for="#emailus_emailid">Email id <span>*</span></label>
+                  <input type="text" id="emailus_emailid" placeholder="Enter your email id" required>
+                </div>
+                <div class="form-field">
+                  <label for="#emailus_message">Message <span>*</span></label>
+                  <textarea name="emailus_message" placeholder="Please enter your message..." required></textarea>
+                </div>
+                <div class="form-field">
+                  <button class="btn btn-submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </section>
       </div>
     </div>
     <footer class="border-top-gray">
       <div class="container">
-        <p>All rights reserved &copy; 2018. <span>HANUVA MARINE SERVICES PVT LTD</span></p>
+        <p>All rights reserved &copy; 2018. <span>HANUVA MARINE SERVICES PVT LTD</span> <span class="pull-right vj"><a href="vulchivijayakumar.github.io" target="_blank"><span>vj</span>.css</a></span></p>
       </div>
     </footer>
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/vendor/jquery.validate.min.js"></script>
     <script src="./js/mhserve.js"></script>
   </body>
 </html>

@@ -19,6 +19,7 @@ html {
   line-height: 1.6;
 }
 
+*,
 *::after,
 *::before {
   box-sizing: inherit;
@@ -89,6 +90,28 @@ section {
   padding-top: 68px;
 }
 
+.vj span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #000000;
+  text-align: center;
+}
+
+.vj a {
+  color: #000000;
+}
+
+.vj a span {
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.mobile-emailus-label {
+  margin-top: 68px;
+}
+
 /* buttons */
 button {
   text-transform: uppercase;
@@ -96,6 +119,7 @@ button {
 }
 
 .btn {
+  display: inline-block;
   margin: 15px 0;
   padding: 10px 20px;
   font-size: 14px;
@@ -105,10 +129,12 @@ button {
   color: var(--color-white);
   border: none;
   transition: all 350ms;
+  text-transform: uppercase;
 }
 
 .btn:hover {
   box-shadow: 0 0 2px 0 rgba(05, 0, 0, 0.24);
+  color: var(--color-white);
 }
 
 /* header */
@@ -123,6 +149,7 @@ header .container {
 /* footer */
 footer {
   font-size: 14px;
+  overflow: hidden;
 }
 
 footer p {
@@ -312,7 +339,72 @@ footer p span {
   font-weight: bold;
 }
 
+/* form styles */
+input,
+textarea {
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  color: #000000;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.form {
+  max-width: 320px;
+}
+
+.form label span {
+  color: red;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
 @media screen and (min-width: 768px) {
+  .pull-right {
+    float: right;
+  }
+
+  .row {
+    overflow: hidden;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .col {
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .col-map {
+    width: 60%;
+  }
+
+  .col-form {
+    width: 40%;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .mobile-emailus-label {
+    margin-top: 0;
+  }
+
   .logo {
     font-size: 20px;
   }
@@ -345,7 +437,7 @@ footer p span {
   }
 
   .google-map iframe {
-    min-height: 600px;
+    min-height: 500px;
   }
 
   .company-address {
@@ -357,6 +449,10 @@ footer p span {
     background-color: var(--color-white);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.24);
     border-radius: 5px;
+  }
+
+  footer p {
+    font-size: 14px;
   }
 
   footer p span {
